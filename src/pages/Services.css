@@ -1,0 +1,121 @@
+.services-detailed {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.service-detailed-card {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 28px;
+  background: white;
+  border-radius: var(--radius);
+  padding: 36px;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.service-detailed-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+
+.service-detailed-icon {
+  font-size: 40px;
+}
+
+.service-detailed-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.service-detailed-desc {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.service-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  background: var(--bg-alt);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.service-features li svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.process-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.process-step {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.process-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.process-card p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .service-detailed-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .service-detailed-icon {
+    font-size: 32px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}

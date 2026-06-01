@@ -1,0 +1,173 @@
+.payment-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #f8f7fa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(175, 105, 63, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.payment-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.payment-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 50px;
+  background: rgba(175, 105, 63, 0.06);
+  border: 1px solid rgba(175, 105, 63, 0.12);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.payment-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.payment-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+.payment-title span {
+  color: var(--accent);
+}
+
+.payment-desc {
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Marquee */
+.payment-marquee-wrap {
+  position: relative;
+}
+
+.payment-marquee-row {
+  display: flex;
+  gap: 24px;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+
+.payment-marquee-row:last-child {
+  margin-bottom: 0;
+}
+
+.payment-marquee-row.left {
+  animation: marquee-left 30s linear infinite;
+}
+
+.payment-marquee-row.right {
+  animation: marquee-right 30s linear infinite;
+}
+
+.payment-marquee-row:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.payment-logo-card {
+  flex-shrink: 0;
+  width: 160px;
+  height: 100px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-logo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(175, 105, 63, 0.12);
+  border-color: rgba(175, 105, 63, 0.2);
+}
+
+.payment-logo-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-logo-card img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.payment-logo-card:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+}
+
+@media (max-width: 768px) {
+  .payment-section {
+    padding: 60px 0;
+  }
+
+  .payment-title {
+    font-size: 28px;
+  }
+
+  .payment-logo-card {
+    width: 130px;
+    height: 80px;
+    padding: 16px 18px;
+  }
+
+  .payment-marquee-row {
+    gap: 16px;
+  }
+}
