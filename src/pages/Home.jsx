@@ -54,6 +54,7 @@ export default function Home() {
           muted
           loop
           playsInline
+          preload="metadata"
         />
         <div className="container hero-content">
           <div className="hero-card">
