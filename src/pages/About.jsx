@@ -1,26 +1,60 @@
 import { Link } from 'react-router-dom'
 import './About.css'
 
-const team = [
+const leadershipRow1 = [
   {
-    name: 'John Anderson',
+    name: 'Mairaj Uddin',
     role: 'CEO & Founder',
-    desc: '20+ years of experience in strategic consulting and business transformation.',
+    bio: '20+ years of experience in Real Estate, Operations, Logistics, HR, and IT, with proven expertise in strategic leadership, business growth, and operational excellence across Pakistan and the UAE.',
+    image: '/mairaaj-uddin.jpeg',
   },
   {
-    name: 'Sarah Mitchell',
-    role: 'Chief Strategy Officer',
-    desc: 'Former McKinsey consultant with deep expertise in growth strategy.',
+    name: 'Robin J. Wood',
+    role: 'Co-Founder',
+    bio: 'Visionary Co-Founder from Oklahoma, USA with extensive experience across multiple industries, bringing a strong track record in entrepreneurship, business strategy, operations, and market development.',
+    image: '/Robin J. Wood.png',
+  },
+]
+
+const leadershipRow2 = [
+  {
+    name: 'Viartseika Maryana',
+    role: 'Chief Financial Officer',
+    bio: 'Seasoned CFO from Belarus with 12 years of experience in financial strategy, budgeting, investment planning, and corporate growth.',
+    image: '/Viartseika Maryana.png',
   },
   {
-    name: 'David Chen',
-    role: 'Head of Analytics',
-    desc: 'Data science expert driving insights for Fortune 500 companies.',
+    name: 'Jason Wood',
+    role: 'Chief Tourism Officer',
+    bio: 'A seasoned tourism professional with 5+ years of experience in travel management, destination partnerships, and customer engagement.',
+    image: '/4323.png',
   },
   {
-    name: 'Emily Roberts',
-    role: 'Director of Operations',
-    desc: 'Specializes in operational excellence and digital transformation.',
+    name: 'Zuleide Pereira',
+    role: 'Managing Director',
+    bio: 'Results-driven Managing Director from Brazil with extensive experience in design, production, and business development across diverse industries.',
+    image: '/Zuleide Pereira.png',
+  },
+]
+
+const leadershipRow3 = [
+  {
+    name: 'Muhammad Faisal',
+    role: 'Head Of IT',
+    bio: 'Experienced IT professional with expertise in technology solutions, digital innovation, and business support services, focused on delivering efficient, reliable, and modern IT solutions.',
+    image: '/Muhammad Faisal.png',
+  },
+  {
+    name: 'Ella Jean Bihasa',
+    role: 'Head of Business Development',
+    bio: 'Dynamic Head of Business Development from Philippines with extensive experience in driving revenue growth, building strategic partnerships, and expanding market presence.',
+    image: '/Ella Jean Bihasa.png',
+  },
+  {
+    name: 'Syed Inam Ur Rehman',
+    role: 'Head Of Legal Compliance',
+    bio: 'Led by a qualified law graduate, our company provides professional PRO and compliance services across Dubai, including visa processing, MOHRE submissions, trade license renewals, MOFA attestations, and AML compliance.',
+    image: '/656565 (1).png',
   },
 ]
 
@@ -91,11 +125,11 @@ const services = [
 ]
 
 const timeline = [
-  { year: '2010', event: 'Venturis Partners founded' },
-  { year: '2013', event: 'Expanded to international markets' },
-  { year: '2016', event: 'Launched digital transformation practice' },
-  { year: '2020', event: 'Surpassed 200 clients milestone' },
-  { year: '2024', event: 'Opened offices in 3 new regions' },
+  { year: '2015', title: 'Founded', event: 'Venturis Partners was established with a vision to create strategic business partnerships and drive sustainable growth.' },
+  { year: '2018', title: 'Expansion', event: 'Expanded operations into international markets, building cross-border partnerships and a global client network.' },
+  { year: '2021', title: 'Digital Transformation', event: 'Launched digital transformation practice, integrating modern technology solutions to enhance client value.' },
+  { year: '2024', title: 'Global Reach', event: 'Surpassed 200+ successful projects and opened offices in 3 new regions, solidifying global presence.' },
+  { year: '2027', title: 'Innovation Hub', event: 'Established innovation hubs across key markets, driving AI-powered solutions and next-gen business strategies.' },
 ]
 
 export default function About() {
@@ -139,7 +173,7 @@ export default function About() {
           <div className="about-detailed-wrap">
             <div className="about-detailed-visual">
               <div className="about-detailed-image-frame">
-                <img src="/43.png" alt="About Venturis Partners" className="about-detailed-img" />
+                <img src="/43%20(1).jpg" alt="About Venturis Partners" className="about-detailed-img" />
               </div>
               <div className="about-detailed-badge">
                 <span className="about-detailed-badge-icon">
@@ -371,44 +405,151 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section-dark">
+      <section className="section timeline-section">
         <div className="container">
           <div className="section-header">
             <span className="section-tag">Timeline</span>
             <h2 className="section-title">Our Journey</h2>
+            <p className="section-subtitle">
+              Key milestones that have shaped our growth and vision.
+            </p>
           </div>
-          <div className="timeline">
+          <div className="tl-wrap">
+            <div className="tl-track"></div>
             {timeline.map((item, i) => (
-              <div key={i} className="timeline-item">
-                <span className="timeline-year">{item.year}</span>
-                <div className="timeline-dot"></div>
-                <p className="timeline-event">{item.event}</p>
+              <div key={i} className="tl-item">
+                <div className="tl-marker">
+                  <span className="tl-dot"></span>
+                  <span className="tl-line"></span>
+                </div>
+                <div className="tl-year">{item.year}</div>
+                <div className="tl-card">
+                  <div className="tl-card-glow"></div>
+                  <div className="tl-card-top">
+                    <span className="tl-card-num">0{i + 1}</span>
+                    <span className="tl-card-year-tag">{item.year}</span>
+                  </div>
+                  <h3 className="tl-card-title">{item.title}</h3>
+                  <p className="tl-card-desc">{item.event}</p>
+                  <div className="tl-card-arrow">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section leadership-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Team</span>
-            <h2 className="section-title">Meet Our Leadership</h2>
+            <span className="section-tag">Leadership</span>
+            <h2 className="section-title">Our Leadership Team</h2>
             <p className="section-subtitle">
-              Experienced professionals dedicated to your success.
+              Meet the experienced leaders driving our vision forward.
             </p>
           </div>
-          <div className="team-grid">
-            {team.map((member, i) => (
-              <div key={i} className="team-card">
-                <div className="team-avatar">
-                  {member.name.split(' ').map(n => n[0]).join('')}
+          <div className="leadership-wrap">
+            <div className="leadership-row">
+              {leadershipRow1.map((member) => (
+                <div key={member.name} className="leader-card-horizontal">
+                  <div className="leader-horizontal-img">
+                    <img src={member.image} alt={member.name} />
+                    <div className="leader-horizontal-img-shine"></div>
+                  </div>
+                  <div className="leader-horizontal-info">
+                    <span className="leader-role-tag">{member.role}</span>
+                    <h3 className="leader-name">{member.name}</h3>
+                    <p className="leader-bio">{member.bio}</p>
+                    <div className="leader-social">
+                      <span className="leader-social-label">Connect</span>
+                      <div className="leader-social-icons">
+                        <span className="leader-social-icon">
+                          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </span>
+                        <span className="leader-social-icon">
+                          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                        </span>
+                        <span className="leader-social-icon">
+                          <img src="/Indeed%2012.png" alt="Indeed" className="leader-indeed-icon" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="team-name">{member.name}</h3>
-                <span className="team-role">{member.role}</span>
-                <p className="team-desc">{member.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="leadership-row-divider">
+              <span className="leadership-row-divider-line"></span>
+              <span className="leadership-row-divider-dot"></span>
+              <span className="leadership-row-divider-line"></span>
+            </div>
+            <div className="leadership-row-grid">
+              {leadershipRow2.map((member) => (
+                <div key={member.name} className="leader-card-vertical">
+                  <div className="leader-vertical-img">
+                    <img src={member.image} alt={member.name} />
+                    <div className="leader-vertical-img-overlay">
+                      <span className="leader-role-badge">{member.role}</span>
+                      <div className="leader-vertical-img-overlay-icons">
+                        <span className="leader-vertical-overlay-icon">
+                          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 4.75c1.24 0 2.25 1.01 2.25 2.25s-1.01 2.25-2.25 2.25S9.75 10.24 9.75 9 10.76 6.75 12 6.75zM17 17H7v-1.5c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17z"/></svg>
+                        </span>
+                        <span className="leader-vertical-overlay-icon">
+                          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="leader-vertical-info">
+                    <h3 className="leader-name-sm">{member.name}</h3>
+                    <p className="leader-bio-sm">{member.bio}</p>
+                    <div className="leader-vertical-info-corner">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="leadership-row-divider">
+              <span className="leadership-row-divider-line"></span>
+              <span className="leadership-row-divider-dot"></span>
+              <span className="leadership-row-divider-line"></span>
+            </div>
+            <div className="leadership-row-grid">
+              {leadershipRow3.map((member) => (
+                <div key={member.name} className="leader-card-vertical">
+                  <div className="leader-vertical-img">
+                    <img src={member.image} alt={member.name} />
+                    <div className="leader-vertical-img-overlay">
+                      <span className="leader-role-badge">{member.role}</span>
+                      <div className="leader-vertical-img-overlay-icons">
+                        <span className="leader-vertical-overlay-icon">
+                          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 4.75c1.24 0 2.25 1.01 2.25 2.25s-1.01 2.25-2.25 2.25S9.75 10.24 9.75 9 10.76 6.75 12 6.75zM17 17H7v-1.5c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17z"/></svg>
+                        </span>
+                        <span className="leader-vertical-overlay-icon">
+                          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="leader-vertical-info">
+                    <h3 className="leader-name-sm">{member.name}</h3>
+                    <p className="leader-bio-sm">{member.bio}</p>
+                    <div className="leader-vertical-info-corner">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

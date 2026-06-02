@@ -106,7 +106,7 @@ export default function Home() {
           <div className="about-wrap">
             <div className="about-visual">
               <div className="about-image-frame">
-                <img src="/About%20Section.png" alt="About Venturis Partners" className="about-img" />
+                <img src="/43%20(1).jpg" alt="About Venturis Partners" className="about-img" />
               </div>
               <div className="about-experience">
                 <span className="about-exp-number">15+</span>
