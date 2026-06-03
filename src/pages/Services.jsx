@@ -57,6 +57,35 @@ export default function Services() {
       <section className="section">
         <div className="container">
           <div className="services-detailed">
+            <Link to="/services/venturis-tech" className="service-detailed-card service-featured-card">
+              <span className="service-detailed-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </span>
+              <div className="service-detailed-content">
+                <span className="service-featured-tag">OUR TECHNOLOGY DIVISION</span>
+                <h3 className="service-detailed-title">Venturis Tech — Engineering Digital Excellence</h3>
+                <p className="service-detailed-desc">
+                  The dedicated technology arm of Venturis Partners. From web and mobile
+                  development to AI, cloud, and cybersecurity — we design, build, and scale
+                  software that powers the next generation of business.
+                </p>
+                <ul className="service-features">
+                  <li>Web & Mobile App Development</li>
+                  <li>Cloud, DevOps & AI / ML</li>
+                  <li>Cybersecurity & Data Analytics</li>
+                  <li>Custom Software & IT Consulting</li>
+                </ul>
+                <span className="service-featured-link">
+                  Explore Venturis Tech
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
+            </Link>
+
             {servicesList.map((service, i) => (
               <div key={i} className="service-detailed-card">
                 <span className="service-detailed-icon">{service.icon}</span>

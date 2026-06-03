@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PaymentMethodsCarousel from '../components/PaymentMethodsCarousel'
+import AnimatedCounter from '../components/AnimatedCounter'
 import './Home.css'
 
 const services = [
@@ -93,7 +94,7 @@ export default function Home() {
                     <path d={stat.icon} />
                   </svg>
                 </div>
-                <span className="stat-number">{stat.number}</span>
+                <span className="stat-number"><AnimatedCounter end={stat.number} /></span>
                 <span className="stat-label">{stat.label}</span>
               </div>
             ))}
