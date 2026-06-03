@@ -31,7 +31,7 @@ export default function Navbar() {
           <img src="/logo.svg" alt="Venturis Partners" className="navbar-logo-img" />
         </Link>
 
-        <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+        <button className={`menu-toggle ${open ? 'open' : ''}`} onClick={() => setOpen(!open)} aria-label="Toggle menu">
           <span className={`hamburger ${open ? 'active' : ''}`}></span>
         </button>
 
@@ -47,17 +47,18 @@ export default function Navbar() {
               >
                 {link.subItems ? (
                   <>
-                    <NavLink
-                      to={link.path}
-                      end={link.path === '/'}
-                      className={() => `nav-link ${isServicesActive ? 'active' : ''}`}
-                      onClick={closeAll}
+                    <button
+                      className={`nav-link nav-link-btn ${isServicesActive ? 'active' : ''}`}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        setServicesOpen(!servicesOpen)
+                      }}
                     >
                       {link.label}
-                      <svg className="nav-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <svg className={`nav-caret ${servicesOpen ? 'rotated' : ''}`} width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="6 9 12 15 18 9"/>
                       </svg>
-                    </NavLink>
+                    </button>
                     <ul className={`nav-dropdown ${servicesOpen ? 'open' : ''}`}>
                       {link.subItems.map(sub => (
                         <li key={sub.path}>
