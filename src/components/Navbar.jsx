@@ -7,6 +7,7 @@ const navLinks = [
   { path: '/about', label: 'About' },
   { path: '/services', label: 'Services', subItems: [
     { path: '/services/venturis-tech', label: 'Venturis Tech' },
+    { path: '/services/e-commerce-trading', label: 'E-Commerce & Trading' },
   ] },
   { path: '/contact', label: 'Contact' },
   { path: '/faq', label: 'FAQ' },
