@@ -826,6 +826,228 @@ export default function ECommerceTrading() {
           height: 12px;
         }
 
+        /* ── Import Export Services ── */
+        .et-import {
+          padding: 90px 0 80px;
+          background: #f9fafc;
+          position: relative;
+        }
+
+        .et-import .container {
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 24px;
+        }
+
+        .et-import-title {
+          text-align: center;
+          margin-bottom: 56px;
+        }
+
+        .et-import-title .badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 14px;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          color: var(--accent);
+          margin-bottom: 14px;
+        }
+
+        .et-import-title .badge::before,
+        .et-import-title .badge::after {
+          content: '';
+          width: 28px;
+          height: 1px;
+          background: var(--accent);
+        }
+
+        .et-import-title h2 {
+          font-size: clamp(28px, 3.5vw, 40px);
+          font-weight: 800;
+          color: var(--primary);
+          font-family: 'Playfair Display', serif;
+          letter-spacing: -0.5px;
+          margin-bottom: 12px;
+        }
+
+        .et-import-title h2 span {
+          color: var(--accent);
+        }
+
+        .et-import-title p {
+          font-size: 15px;
+          color: var(--text-light);
+          max-width: 520px;
+          margin: 0 auto;
+          line-height: 1.7;
+        }
+
+        .et-import-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
+        }
+
+        .et-import-card {
+          background: linear-gradient(135deg, #19283a, #ae683f);
+          border-radius: 18px;
+          padding: 36px 28px 32px;
+          box-shadow: 0 4px 24px rgba(174, 104, 63, 0.15);
+          transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease;
+          position: relative;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .et-import-card::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, #ae683f, #19283a);
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          z-index: 0;
+        }
+
+        .et-import-card::after {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08), transparent 60%);
+          opacity: 0;
+          transition: opacity 0.6s ease;
+          z-index: 0;
+          pointer-events: none;
+        }
+
+        .et-import-card > * {
+          position: relative;
+          z-index: 1;
+        }
+
+        .et-import-card:hover {
+          transform: translateY(-10px) scale(1.02);
+          box-shadow: 0 30px 70px rgba(174, 104, 63, 0.35);
+          border-color: rgba(255,255,255,0.2);
+        }
+
+        .et-import-card:hover::before {
+          opacity: 1;
+        }
+
+        .et-import-card:hover::after {
+          opacity: 1;
+        }
+
+        .et-import-icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 22px;
+          color: #fff;
+          background: rgba(255,255,255,0.1);
+          backdrop-filter: blur(4px);
+          transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .et-import-icon svg {
+          width: 26px;
+          height: 26px;
+        }
+
+        .et-import-card:hover .et-import-icon {
+          transform: scale(1.12) rotate(-3deg);
+          background: rgba(255,255,255,0.22);
+          box-shadow: 0 0 30px rgba(255,255,255,0.15);
+        }
+
+        .et-import-card h3 {
+          font-size: 19px;
+          font-weight: 700;
+          color: #fff;
+          margin-bottom: 10px;
+          line-height: 1.3;
+          transition: color 0.35s ease, transform 0.4s ease;
+        }
+
+        .et-import-card:hover h3 {
+          color: #f0d5c0;
+          transform: translateX(4px);
+        }
+
+        .et-import-card p {
+          font-size: 13.5px;
+          color: rgba(255,255,255,0.78);
+          line-height: 1.7;
+          margin-bottom: 18px;
+          transition: color 0.4s ease;
+        }
+
+        .et-import-card:hover p {
+          color: rgba(255,255,255,0.92);
+        }
+
+        .et-import-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 12px;
+          font-weight: 700;
+          color: rgba(255,255,255,0.9);
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          text-decoration: none;
+          transition: gap 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease;
+        }
+
+        .et-import-link svg {
+          width: 16px;
+          height: 16px;
+          transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .et-import-card:hover .et-import-link {
+          gap: 14px;
+          color: #fff;
+          letter-spacing: 1px;
+        }
+
+        .et-import-card:hover .et-import-link svg {
+          transform: translateX(5px);
+        }
+
+        @media (max-width: 1024px) {
+          .et-import-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 640px) {
+          .et-import {
+            padding: 56px 0 48px;
+          }
+          .et-import-grid {
+            grid-template-columns: 1fr;
+          }
+          .et-import-title {
+            margin-bottom: 36px;
+          }
+          .et-import-title h2 {
+            font-size: 24px;
+          }
+          .et-import-card {
+            padding: 28px 24px;
+          }
+        }
+
         @media (max-width: 900px) {
           .et-trade-images {
             grid-template-columns: 1fr 1fr;
@@ -1196,6 +1418,102 @@ export default function ECommerceTrading() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* ── Import & Export Services ── */}
+      <section className="et-import">
+        <div className="container">
+          <div className="et-import-title">
+            <div className="badge">WHY CHOOSE US</div>
+            <h2>Our Trade <span>Excellence</span></h2>
+            <p>Commitment to quality, logistics, packaging, and sustainability across every global shipment.</p>
+          </div>
+
+          <div className="et-import-grid">
+            {/* Card 1 - Quality Assurance */}
+            <div className="et-import-card">
+              <div className="et-import-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+                </svg>
+              </div>
+              <h3>Quality Assurance</h3>
+              <p>ISO &amp; HACCP certified processes, batch testing, and full traceability for every shipment.</p>
+              <span className="et-import-link">
+                Learn More
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+
+            {/* Card 2 - Global Logistics */}
+            <div className="et-import-card">
+              <div className="et-import-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h3>Global Logistics</h3>
+              <p>Air, sea, and land freight options with insured shipments and timed delivery windows.</p>
+              <span className="et-import-link">
+                Learn More
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+
+            {/* Card 3 - Custom Packaging */}
+            <div className="et-import-card">
+              <div className="et-import-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
+                </svg>
+              </div>
+              <h3>Custom Packaging</h3>
+              <p>Bulk-to-retail packaging solutions, private-label options, and tamper-evident seals.</p>
+              <span className="et-import-link">
+                Learn More
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+
+            {/* Card 4 - Sustainability Commitment */}
+            <div className="et-import-card">
+              <div className="et-import-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <h3>Sustainability Commitment</h3>
+              <p>Responsible sourcing, recyclable packaging, and certified recycling for e-waste &amp; scrap.</p>
+              <span className="et-import-link">
+                Learn More
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="vt-cta-section">
+        <div className="container">
+          <div className="vt-cta-card">
+            <div className="vt-cta-glow"></div>
+            <div className="vt-cta-body">
+              <div className="vt-cta-text">
+                <span className="vt-cta-badge">GET IN TOUCH</span>
+                <h2 className="vt-cta-title">Ready to Start Trading?</h2>
+                <p className="vt-cta-desc">
+                  Contact our trade team today for a free consultation on sourcing, logistics, and global market opportunities tailored to your business.
+                </p>
+              </div>
+              <div className="vt-cta-actions">
+                <Link to="/contact" className="vt-btn-primary">
+                  Schedule a Call
+                  <ArrowIcon />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
