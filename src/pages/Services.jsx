@@ -86,6 +86,62 @@ export default function Services() {
               </div>
             </Link>
 
+            <Link to="/services/e-commerce-trading" className="service-detailed-card service-featured-card">
+              <span className="service-detailed-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v12M8 10l4-4 4 4M8 14l4 4 4-4"/>
+                </svg>
+              </span>
+              <div className="service-detailed-content">
+                <span className="service-featured-tag">OUR TRADING DIVISION</span>
+                <h3 className="service-detailed-title">E-Commerce & Trading — Global Market Access</h3>
+                <p className="service-detailed-desc">
+                  Venturis Trading provides seamless access to global financial markets and international
+                  trade opportunities through a secure, reliable, and technology-driven trading network.
+                </p>
+                <ul className="service-features">
+                  <li>Global Forex & Crypto Trading</li>
+                  <li>Commodities, Stocks & Indices</li>
+                  <li>Recyclable Materials & Spices Trading</li>
+                  <li>Consumer Electronics & IT Hardware</li>
+                </ul>
+                <span className="service-featured-link">
+                  Explore E-Commerce & Trading
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
+            </Link>
+
+            <Link to="/services/consultancy" className="service-detailed-card service-featured-card">
+              <span className="service-detailed-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </span>
+              <div className="service-detailed-content">
+                <span className="service-featured-tag">OUR CONSULTANCY DIVISION</span>
+                <h3 className="service-detailed-title">Consultancy — Strategic Business Advisory</h3>
+                <p className="service-detailed-desc">
+                  Venturis Consultancy delivers strategic consulting solutions that empower businesses
+                  to navigate complexity, drive innovation, and achieve sustainable growth.
+                </p>
+                <ul className="service-features">
+                  <li>Strategy & Business Transformation</li>
+                  <li>Market Intelligence & Analytics</li>
+                  <li>Digital & Technology Advisory</li>
+                  <li>Risk, Compliance & Change Management</li>
+                </ul>
+                <span className="service-featured-link">
+                  Explore Consultancy
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
+            </Link>
+
             {servicesList.map((service, i) => (
               <div key={i} className="service-detailed-card">
                 <span className="service-detailed-icon">{service.icon}</span>

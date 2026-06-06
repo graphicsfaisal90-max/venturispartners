@@ -5,6 +5,7 @@ import About from './pages/About'
 import Services from './pages/Services'
 import VenturisTech from './pages/VenturisTech'
 import ECommerceTrading from './pages/ECommerceTrading'
+import Consultancy from './pages/Consultancy'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="services" element={<Services />} />
         <Route path="services/venturis-tech" element={<VenturisTech />} />
         <Route path="services/e-commerce-trading" element={<ECommerceTrading />} />
+        <Route path="services/consultancy" element={<Consultancy />} />
         <Route path="contact" element={<Contact />} />
         <Route path="faq" element={<FAQ />} />
       </Route>

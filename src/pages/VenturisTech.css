@@ -420,6 +420,85 @@
   color: var(--text-light);
 }
 
+/* tablet */
+@media (max-width: 992px) {
+  .vt-about {
+    padding: 80px 0;
+  }
+  .vt-about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .vt-about-image {
+    aspect-ratio: 16 / 9;
+    max-height: 400px;
+  }
+  .vt-about-content {
+    text-align: center;
+  }
+  .vt-about-content .vt-badge {
+    align-self: center;
+  }
+  .vt-about-features {
+    grid-template-columns: 1fr 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .vt-about-title {
+    font-size: clamp(26px, 4vw, 36px);
+  }
+  .vt-about-desc {
+    font-size: 15px;
+  }
+  .vt-about-float-card {
+    left: 16px;
+    bottom: -20px;
+    padding: 14px 20px;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .vt-about-grid {
+    gap: 32px;
+  }
+  .vt-about-image {
+    aspect-ratio: 4 / 3;
+    max-height: 300px;
+  }
+  .vt-about-content {
+    text-align: left;
+  }
+  .vt-about-content .vt-badge {
+    align-self: flex-start;
+  }
+  .vt-about-features {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .vt-about-float-card {
+    left: 12px;
+    bottom: -18px;
+    padding: 12px 16px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+  .vt-about-float-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .vt-about-float-text strong {
+    font-size: 13px;
+  }
+  .vt-about-float-text span {
+    font-size: 11px;
+  }
+}
+
 /* ===== SERVICES ===== */
 .vt-services-section {
   padding: 110px 0;
@@ -1158,11 +1237,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .vt-about-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
   .vt-cta-body {
     flex-direction: column;
     text-align: center;
@@ -1197,10 +1271,6 @@
     justify-content: center;
   }
 
-  .vt-about-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1241,24 +1311,6 @@
   .vt-btn-outline {
     width: 100%;
     justify-content: center;
-  }
-
-  .vt-about {
-    padding: 70px 0;
-  }
-
-  .vt-about-title {
-    font-size: 28px;
-  }
-
-  .vt-about-features {
-    grid-template-columns: 1fr;
-  }
-
-  .vt-about-float-card {
-    left: 16px;
-    bottom: 16px;
-    padding: 14px 20px;
   }
 
   .vt-process-steps {
