@@ -202,7 +202,6 @@ export default function ComprehensiveConsultancy() {
           .cn-services-grid {
             grid-template-columns: repeat(2, 1fr);
           }
-          .cpc-service-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -215,7 +214,6 @@ export default function ComprehensiveConsultancy() {
           .cn-service-card {
             padding: 28px 22px 26px;
           }
-          .cpc-service-grid { grid-template-columns: 1fr; }
         }
         .cpc-service-grid {
           display: grid;
@@ -341,6 +339,24 @@ export default function ComprehensiveConsultancy() {
         }
         @media (max-width: 480px) {
           .vt-hero-content { padding: 0 16px; }
+        }
+        @media (max-width: 1024px) {
+          .cpc-service-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+          .cpc-service-grid { grid-template-columns: 1fr; }
+          .cpc-service-card { padding: 28px 22px; }
+        }
+        @media (max-width: 480px) {
+          .cpc-service-card {
+            padding: 24px 18px;
+          }
+          .cpc-service-card h3 {
+            font-size: 17px;
+          }
+          .cpc-service-card p {
+            font-size: 12.5px;
+          }
         }
       `}</style>
 
