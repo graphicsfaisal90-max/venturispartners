@@ -342,6 +342,7 @@ export default function CorporateConsultancy() {
           .cn-corp-sisters {
             grid-template-columns: repeat(2, 1fr);
           }
+          .cpc-service-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
           .cn-corporate {
@@ -354,6 +355,9 @@ export default function CorporateConsultancy() {
           .cn-corp-sisters {
             grid-template-columns: 1fr;
           }
+        }
+        @media (max-width: 480px) {
+          .vt-hero-content { padding: 0 16px; }
         }
       `}</style>
 

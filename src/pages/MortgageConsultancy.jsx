@@ -53,8 +53,14 @@ export default function MortgageConsultancy() {
           color: #5a6577;
           line-height: 1.7;
         }
+        @media (max-width: 1024px) {
+          .mc-service-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 768px) {
           .mc-service-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+          .vt-hero-content { padding: 0 16px; }
         }
       `}</style>
 

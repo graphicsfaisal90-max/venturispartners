@@ -449,15 +449,23 @@ export default function ClientConsultancy() {
           .cn-client-benefits {
             grid-template-columns: repeat(3, 1fr);
           }
+          .cc-service-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
         @media (max-width: 768px) {
           .cn-client { padding: 70px 0; }
           .cn-client-cards { grid-template-columns: 1fr; }
           .cn-client-benefits { grid-template-columns: repeat(2, 1fr); }
           .cn-client-closing { padding: 28px 24px; }
+          .cc-service-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 480px) {
           .cn-client-benefits { grid-template-columns: 1fr; }
+          .cn-client-image-wrap img { height: 240px; }
+          .cn-client-card-inner { padding: 24px 20px; }
+          .cn-client-closing-inner { padding: 28px 20px; }
+          .cn-client-closing p { font-size: 13px; }
         }
       `}</style>
 

@@ -1391,3 +1391,30 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .vt-hero {
+    padding: 100px 0 40px;
+    min-height: auto;
+  }
+  .vt-hero-title {
+    font-size: clamp(24px, 8vw, 32px);
+  }
+  .vt-hero-desc {
+    font-size: 13px;
+    margin-bottom: 32px;
+  }
+  .vt-hero-content {
+    padding: 0 16px;
+  }
+  .vt-hero-badge {
+    font-size: 10px;
+    padding: 6px 14px;
+    margin-bottom: 16px;
+  }
+  .vt-btn-primary,
+  .vt-btn-outline {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+}

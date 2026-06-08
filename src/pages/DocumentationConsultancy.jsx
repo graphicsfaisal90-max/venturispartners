@@ -333,6 +333,7 @@ export default function DocumentationConsultancy() {
           .cn-doc-footer-btn {
             justify-content: center;
           }
+          .dc-service-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
           .cn-documentary {
@@ -348,6 +349,9 @@ export default function DocumentationConsultancy() {
           .cn-doc-footer {
             padding: 24px 20px;
           }
+        }
+        @media (max-width: 480px) {
+          .vt-hero-content { padding: 0 16px; }
         }
       `}</style>
 

@@ -70,9 +70,16 @@ export default function FinancialConsultancy() {
           flex-shrink: 0;
           color: #af693f;
         }
+        @media (max-width: 1024px) {
+          .fc-service-grid { grid-template-columns: repeat(2, 1fr); }
+          .fc-features { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 768px) {
           .fc-service-grid { grid-template-columns: 1fr; }
           .fc-features { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+          .vt-hero-content { padding: 0 16px; }
         }
       `}</style>
 
