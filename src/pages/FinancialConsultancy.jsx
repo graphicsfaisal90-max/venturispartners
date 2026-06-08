@@ -172,22 +172,10 @@ export default function FinancialConsultancy() {
         @media (max-width: 1024px) {
           .fc-service-grid { grid-template-columns: repeat(2, 1fr); }
           .fc-features { grid-template-columns: repeat(2, 1fr); }
-          .cn-fin-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
         }
         @media (max-width: 768px) {
           .fc-service-grid { grid-template-columns: 1fr; }
           .fc-features { grid-template-columns: 1fr; }
-          .cn-financial {
-            padding: 70px 0;
-          }
-          .cn-fin-grid {
-            grid-template-columns: 1fr;
-          }
-          .cn-fin-card {
-            padding: 24px 20px;
-          }
         }
         @media (max-width: 480px) {
           .vt-hero-content { padding: 0 16px; }
@@ -418,6 +406,48 @@ export default function FinancialConsultancy() {
           background: var(--accent);
           opacity: 0.7;
           flex-shrink: 0;
+        }
+        @media (max-width: 1024px) {
+          .cn-fin-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (max-width: 768px) {
+          .cn-financial {
+            padding: 70px 0;
+          }
+          .cn-fin-grid {
+            grid-template-columns: 1fr;
+          }
+          .cn-fin-card {
+            padding: 24px 20px;
+          }
+        }
+        @media (max-width: 480px) {
+          .cn-fin-card {
+            padding: 20px 16px;
+          }
+          .cn-fin-card-header {
+            gap: 10px;
+          }
+          .cn-fin-card-icon {
+            width: 40px;
+            height: 40px;
+          }
+          .cn-fin-card-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+          .cn-fin-card h3 {
+            font-size: 15px;
+          }
+          .cn-fin-card-desc {
+            font-size: 12.5px;
+          }
+          .cn-fin-card li {
+            font-size: 12px;
+            padding: 4px 8px;
+          }
         }
       `}</style>
 
