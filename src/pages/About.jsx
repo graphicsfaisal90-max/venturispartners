@@ -45,10 +45,10 @@ const leadershipRow3 = [
     image: '/Muhammad Faisal.png',
   },
   {
-    name: 'Ella Jean Bihasa',
-    role: 'Head of Business Development',
-    bio: 'Dynamic Head of Business Development from Philippines with extensive experience in driving revenue growth, building strategic partnerships, and expanding market presence.',
-    image: '/Ella Jean Bihasa.png',
+    name: 'Kristine Angeli W. Wapao',
+    role: 'Head of Sales & Marketing',
+    bio: 'Kristine leads our sales and marketing initiatives from the Philippines. Backed by a Business Administration background, she excels at transforming market opportunities into revenue growth and building high-impact regional partnerships.',
+    image: '/54687.png',
   },
   {
     name: 'Syed Inam Ur Rehman',
