@@ -23,35 +23,134 @@ export default function DocumentationConsultancy() {
           background: linear-gradient(135deg, #ae683f, #19283a);
           box-shadow: 0 12px 32px rgba(174, 104, 63, 0.35);
         }
+        @media (max-width: 1024px) {
+          .vt-hero-content {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+          }
+        }
         .dc-service-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 28px;
+          gap: 24px;
           margin-top: 50px;
         }
         .dc-service-card {
-          background: #fff;
-          border-radius: 16px;
-          padding: 36px 30px;
-          box-shadow: 0 2px 20px rgba(25,40,58,0.06);
-          transition: transform 0.4s ease, box-shadow 0.4s ease;
-          border-top: 3px solid #af693f;
+          background: linear-gradient(135deg, #1e2d3d, #b8753e);
+          border-radius: 18px;
+          padding: 34px 28px 40px;
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .dc-service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background: rgba(255,255,255,0.35);
+          border-radius: 0 2px 2px 0;
+          transition: all 0.4s ease;
+          z-index: 2;
+        }
+        .dc-service-card::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+          transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          pointer-events: none;
+          z-index: 1;
         }
         .dc-service-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 16px 48px rgba(25,40,58,0.12);
+          transform: translateY(-8px) scale(1.03);
+          box-shadow:
+            0 30px 60px rgba(25,40,58,0.35),
+            0 0 50px rgba(175,105,63,0.15);
+        }
+        .dc-service-card:hover::before {
+          background: #ffffff;
+          width: 4px;
+          box-shadow: 0 0 14px rgba(255,255,255,0.5);
+        }
+        .dc-service-card:hover::after {
+          left: 100%;
+        }
+        .dc-service-num {
+          font-size: 42px;
+          font-weight: 800;
+          font-family: 'Playfair Display', serif;
+          color: rgba(255,255,255,0.04);
+          position: absolute;
+          top: 12px;
+          right: 18px;
+          line-height: 1;
+          pointer-events: none;
+          z-index: 1;
+          transition: color 0.5s ease;
+        }
+        .dc-service-card:hover .dc-service-num {
+          color: rgba(255,255,255,0.08);
+        }
+        .dc-service-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          background: rgba(175,105,63,0.25);
+          border: 1px solid rgba(255,255,255,0.12);
+          transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+          position: relative;
+          z-index: 2;
+        }
+        .dc-service-card:hover .dc-service-icon {
+          background: linear-gradient(135deg, var(--accent), #c97a4a);
+          border-color: transparent;
+          box-shadow: 0 8px 28px rgba(175,105,63,0.35);
+          transform: scale(1.1) rotate(-3deg);
+        }
+        .dc-service-icon svg {
+          width: 24px;
+          height: 24px;
+          color: #fff;
+          transition: transform 0.6s ease;
+        }
+        .dc-service-card:hover .dc-service-icon svg {
+          transform: scale(1.08);
         }
         .dc-service-card h3 {
           font-size: 20px;
           font-weight: 700;
-          color: #19283a;
+          color: rgba(255,255,255,0.92);
           margin-bottom: 12px;
           font-family: 'Playfair Display', serif;
+          position: relative;
+          z-index: 2;
+          transition: color 0.4s ease;
+        }
+        .dc-service-card:hover h3 {
+          color: #ffffff;
         }
         .dc-service-card p {
           font-size: 14px;
-          color: #5a6577;
-          line-height: 1.7;
+          color: rgba(255,255,255,0.55);
+          line-height: 1.75;
+          margin: 0;
+          position: relative;
+          z-index: 2;
+          transition: color 0.4s ease;
+        }
+        .dc-service-card:hover p {
+          color: rgba(255,255,255,0.75);
         }
 
         .cn-documentary {
@@ -153,11 +252,11 @@ export default function DocumentationConsultancy() {
           z-index: 1;
         }
         .cn-doc-card {
-          background: #ffffff;
-          border: 1px solid var(--border);
+          background: linear-gradient(135deg, #19283a, #ae683f);
+          border: 1px solid rgba(255,255,255,0.08);
           border-radius: 18px;
           padding: 32px 28px;
-          transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
           position: relative;
           overflow: hidden;
         }
@@ -168,27 +267,50 @@ export default function DocumentationConsultancy() {
           left: 0;
           width: 3px;
           height: 100%;
-          background: linear-gradient(180deg, var(--accent), #c97a4a);
-          border-radius: 0 0 2px 2px;
+          background: rgba(255,255,255,0.4);
+          border-radius: 0 2px 2px 0;
+          transition: all 0.4s ease;
+          z-index: 3;
+        }
+        .cn-doc-card::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+          transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          pointer-events: none;
+          z-index: 1;
         }
         .cn-doc-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 20px 50px rgba(25, 40, 58, 0.08);
-          border-color: rgba(175, 105, 63, 0.15);
+          transform: translateY(-8px) scale(1.02);
+          box-shadow:
+            0 30px 60px rgba(25,40,58,0.35),
+            0 0 50px rgba(175,105,63,0.15);
+        }
+        .cn-doc-card:hover::before {
+          background: #ffffff;
+          width: 4px;
+          box-shadow: 0 0 14px rgba(255,255,255,0.5);
+        }
+        .cn-doc-card:hover::after {
+          left: 100%;
         }
         .cn-doc-card:hover .cn-doc-card-icon {
           transform: scale(1.1) rotate(-3deg);
           box-shadow: 0 8px 25px rgba(175, 105, 63, 0.3);
         }
         .cn-doc-card:hover .cn-doc-card-num {
-          color: rgba(175, 105, 63, 0.08);
+          color: rgba(255,255,255,0.1);
         }
         .cn-doc-card:hover h3 {
-          color: var(--accent);
+          color: #ffffff;
         }
         .cn-doc-card:hover li {
-          border-color: rgba(175, 105, 63, 0.1);
-          background: rgba(175, 105, 63, 0.03);
+          border-color: rgba(255,255,255,0.15);
+          background: rgba(255,255,255,0.08);
         }
         .cn-doc-card-header {
           display: flex;
@@ -196,7 +318,7 @@ export default function DocumentationConsultancy() {
           gap: 14px;
           margin-bottom: 16px;
           position: relative;
-          z-index: 1;
+          z-index: 2;
         }
         .cn-doc-card-icon {
           width: 48px;
@@ -205,7 +327,7 @@ export default function DocumentationConsultancy() {
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+          transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
           background: linear-gradient(135deg, var(--accent), #c97a4a);
           border: none;
         }
@@ -218,7 +340,7 @@ export default function DocumentationConsultancy() {
           margin-left: auto;
           font-size: 26px;
           font-weight: 800;
-          color: rgba(25, 40, 58, 0.04);
+          color: rgba(255,255,255,0.06);
           font-family: 'Playfair Display', serif;
           line-height: 1;
           transition: color 0.4s ease;
@@ -226,50 +348,50 @@ export default function DocumentationConsultancy() {
         .cn-doc-card h3 {
           font-size: 17px;
           font-weight: 700;
-          color: var(--primary);
+          color: rgba(255,255,255,0.92);
           margin-bottom: 8px;
           font-family: 'Playfair Display', serif;
           position: relative;
-          z-index: 1;
+          z-index: 2;
           transition: color 0.4s ease;
         }
         .cn-doc-card-desc {
           font-size: 13.5px;
-          color: var(--text-light);
+          color: rgba(255,255,255,0.6);
           line-height: 1.7;
           margin-bottom: 14px;
           position: relative;
-          z-index: 1;
+          z-index: 2;
+          transition: color 0.4s ease;
+        }
+        .cn-doc-card:hover .cn-doc-card-desc {
+          color: rgba(255,255,255,0.75);
         }
         .cn-doc-card ul {
           display: flex;
           flex-direction: column;
           gap: 7px;
           position: relative;
-          z-index: 1;
+          z-index: 2;
         }
         .cn-doc-card li {
           display: flex;
           align-items: center;
           gap: 10px;
           font-size: 13.5px;
-          color: var(--text-light);
+          color: rgba(255,255,255,0.55);
           transition: all 0.3s ease;
           padding: 5px 10px;
-          background: var(--bg-alt);
+          background: rgba(255,255,255,0.06);
           border-radius: 8px;
-          border: 1px solid var(--border);
-        }
-        .cn-doc-card:hover li {
-          border-color: rgba(175, 105, 63, 0.1);
-          background: rgba(175, 105, 63, 0.03);
+          border: 1px solid rgba(255,255,255,0.08);
         }
         .cn-doc-dot {
           width: 5px;
           height: 5px;
           border-radius: 50%;
           background: var(--accent);
-          opacity: 0.5;
+          opacity: 0.7;
           flex-shrink: 0;
         }
         .cn-doc-footer {
@@ -356,7 +478,7 @@ export default function DocumentationConsultancy() {
       `}</style>
 
       <section className="vt-hero">
-        <img className="vt-hero-video" src="/client-hero.jpg" alt="Documentation Consultancy" />
+        <img className="vt-hero-video" src="/documentation-hero.jpg" alt="Documentation Consultancy" />
         <div className="vt-hero-overlay"></div>
         <div className="vt-hero-content">
           <span className="vt-hero-badge">DOCUMENTATION CONSULTANCY</span>
@@ -424,26 +546,62 @@ export default function DocumentationConsultancy() {
           </div>
           <div className="dc-service-grid">
             <div className="dc-service-card">
+              <span className="dc-service-num">01</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+                </svg>
+              </div>
               <h3>Visa Processing</h3>
               <p>Comprehensive visa services including employment visas, investor visas, family sponsorships, and visit visas with end-to-end processing support.</p>
             </div>
             <div className="dc-service-card">
+              <span className="dc-service-num">02</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 12l2 2 4-4" /><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                </svg>
+              </div>
               <h3>Legal Attestation</h3>
               <p>Professional attestation of educational certificates, commercial documents, and personal papers from relevant authorities and embassies.</p>
             </div>
             <div className="dc-service-card">
+              <span className="dc-service-num">03</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                </svg>
+              </div>
               <h3>Business Setup</h3>
               <p>Complete business incorporation services including company formation, trade license acquisition, and PRO services across all UAE jurisdictions.</p>
             </div>
             <div className="dc-service-card">
+              <span className="dc-service-num">04</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
               <h3>Government Services</h3>
               <p>Efficient processing of government-related transactions, renewals, and correspondence with local and federal authorities.</p>
             </div>
             <div className="dc-service-card">
+              <span className="dc-service-num">05</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                </svg>
+              </div>
               <h3>Translation Services</h3>
               <p>Certified translation of legal, financial, and technical documents by qualified translators in multiple languages.</p>
             </div>
             <div className="dc-service-card">
+              <span className="dc-service-num">06</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+              </div>
               <h3>PRO Services</h3>
               <p>Dedicated public relations officer services handling all government paperwork, submissions, and follow-ups on your behalf.</p>
             </div>

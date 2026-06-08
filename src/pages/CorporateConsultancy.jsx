@@ -23,35 +23,134 @@ export default function CorporateConsultancy() {
           background: linear-gradient(135deg, #ae683f, #19283a);
           box-shadow: 0 12px 32px rgba(174, 104, 63, 0.35);
         }
+        @media (max-width: 1024px) {
+          .vt-hero-content {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+          }
+        }
         .cpc-service-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 28px;
+          gap: 24px;
           margin-top: 50px;
         }
         .cpc-service-card {
-          background: #fff;
-          border-radius: 16px;
-          padding: 36px 30px;
-          box-shadow: 0 2px 20px rgba(25,40,58,0.06);
-          transition: transform 0.4s ease, box-shadow 0.4s ease;
-          border-top: 3px solid #af693f;
+          background: linear-gradient(135deg, #1e2d3d, #b8753e);
+          border-radius: 18px;
+          padding: 34px 28px 40px;
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .cpc-service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background: rgba(255,255,255,0.35);
+          border-radius: 0 2px 2px 0;
+          transition: all 0.4s ease;
+          z-index: 2;
+        }
+        .cpc-service-card::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+          transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          pointer-events: none;
+          z-index: 1;
         }
         .cpc-service-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 16px 48px rgba(25,40,58,0.12);
+          transform: translateY(-8px) scale(1.03);
+          box-shadow:
+            0 30px 60px rgba(25,40,58,0.35),
+            0 0 50px rgba(175,105,63,0.15);
+        }
+        .cpc-service-card:hover::before {
+          background: #ffffff;
+          width: 4px;
+          box-shadow: 0 0 14px rgba(255,255,255,0.5);
+        }
+        .cpc-service-card:hover::after {
+          left: 100%;
+        }
+        .cpc-service-num {
+          font-size: 42px;
+          font-weight: 800;
+          font-family: 'Playfair Display', serif;
+          color: rgba(255,255,255,0.04);
+          position: absolute;
+          top: 12px;
+          right: 18px;
+          line-height: 1;
+          pointer-events: none;
+          z-index: 1;
+          transition: color 0.5s ease;
+        }
+        .cpc-service-card:hover .cpc-service-num {
+          color: rgba(255,255,255,0.08);
+        }
+        .cpc-service-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          background: rgba(175,105,63,0.25);
+          border: 1px solid rgba(255,255,255,0.12);
+          transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+          position: relative;
+          z-index: 2;
+        }
+        .cpc-service-card:hover .cpc-service-icon {
+          background: linear-gradient(135deg, var(--accent), #c97a4a);
+          border-color: transparent;
+          box-shadow: 0 8px 28px rgba(175,105,63,0.35);
+          transform: scale(1.1) rotate(-3deg);
+        }
+        .cpc-service-icon svg {
+          width: 24px;
+          height: 24px;
+          color: #fff;
+          transition: transform 0.6s ease;
+        }
+        .cpc-service-card:hover .cpc-service-icon svg {
+          transform: scale(1.08);
         }
         .cpc-service-card h3 {
           font-size: 20px;
           font-weight: 700;
-          color: #19283a;
+          color: rgba(255,255,255,0.92);
           margin-bottom: 12px;
           font-family: 'Playfair Display', serif;
+          position: relative;
+          z-index: 2;
+          transition: color 0.4s ease;
+        }
+        .cpc-service-card:hover h3 {
+          color: #ffffff;
         }
         .cpc-service-card p {
           font-size: 14px;
-          color: #5a6577;
-          line-height: 1.7;
+          color: rgba(255,255,255,0.55);
+          line-height: 1.75;
+          margin: 0;
+          position: relative;
+          z-index: 2;
+          transition: color 0.4s ease;
+        }
+        .cpc-service-card:hover p {
+          color: rgba(255,255,255,0.75);
         }
 
         .cn-corporate {
@@ -190,19 +289,18 @@ export default function CorporateConsultancy() {
         }
         .cn-corp-divisions {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 20px;
-          max-width: 900px;
+          max-width: 1000px;
           margin: 0 auto 56px;
           position: relative;
           z-index: 1;
         }
         .cn-corp-division {
-          background: #ffffff;
-          border: 1px solid var(--border);
+          background: linear-gradient(135deg, #19283a, #ae683f);
           border-radius: 18px;
           padding: 32px 28px;
-          transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
           position: relative;
           overflow: hidden;
         }
@@ -213,18 +311,40 @@ export default function CorporateConsultancy() {
           left: 0;
           width: 3px;
           height: 100%;
-          background: linear-gradient(180deg, var(--accent), #c97a4a);
-          border-radius: 0 0 2px 2px;
+          background: rgba(255,255,255,0.4);
+          border-radius: 0 2px 2px 0;
+          transition: all 0.4s ease;
+          z-index: 2;
+        }
+        .cn-corp-division::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+          transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          pointer-events: none;
+          z-index: 1;
         }
         .cn-corp-division:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 40px rgba(25, 40, 58, 0.08);
-          border-color: rgba(175, 105, 63, 0.15);
+          transform: translateY(-8px) scale(1.03);
+          box-shadow:
+            0 30px 60px rgba(25,40,58,0.35),
+            0 0 50px rgba(175,105,63,0.18);
+        }
+        .cn-corp-division:hover::before {
           background: #ffffff;
+          width: 4px;
+          box-shadow: 0 0 14px rgba(255,255,255,0.5);
+        }
+        .cn-corp-division:hover::after {
+          left: 100%;
         }
         .cn-corp-division:hover .cn-corp-div-icon {
-          transform: scale(1.1) rotate(-5deg);
-          box-shadow: 0 8px 25px rgba(175, 105, 63, 0.3);
+          transform: scale(1.15) rotate(-5deg);
+          box-shadow: 0 10px 30px rgba(175, 105, 63, 0.4);
         }
         .cn-corp-div-icon {
           width: 48px;
@@ -234,30 +354,50 @@ export default function CorporateConsultancy() {
           align-items: center;
           justify-content: center;
           margin-bottom: 18px;
-          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+          transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+          background: rgba(175,105,63,0.3);
+          border: 1px solid rgba(255,255,255,0.15);
+          position: relative;
+          z-index: 2;
+        }
+        .cn-corp-division:hover .cn-corp-div-icon {
           background: linear-gradient(135deg, var(--accent), #c97a4a);
+          border-color: transparent;
+          box-shadow: 0 10px 30px rgba(175, 105, 63, 0.4);
         }
         .cn-corp-div-icon svg {
           width: 22px;
           height: 22px;
           color: #fff;
+          transition: transform 0.6s ease;
+        }
+        .cn-corp-division:hover .cn-corp-div-icon svg {
+          transform: scale(1.1);
         }
         .cn-corp-division h4 {
           font-size: 17px;
           font-weight: 700;
-          color: var(--primary);
+          color: rgba(255,255,255,0.92);
           margin-bottom: 10px;
           font-family: 'Playfair Display', serif;
-          transition: color 0.3s ease;
+          position: relative;
+          z-index: 2;
+          transition: color 0.4s ease;
         }
         .cn-corp-division:hover h4 {
-          color: var(--accent);
+          color: #ffffff;
         }
         .cn-corp-division p {
           font-size: 13.5px;
-          color: var(--text-light);
+          color: rgba(255,255,255,0.6);
           line-height: 1.7;
           margin: 0;
+          position: relative;
+          z-index: 2;
+          transition: color 0.4s ease;
+        }
+        .cn-corp-division:hover p {
+          color: rgba(255,255,255,0.8);
         }
         .cn-corp-sisters {
           display: grid;
@@ -267,73 +407,6 @@ export default function CorporateConsultancy() {
           margin: 0 auto;
           position: relative;
           z-index: 1;
-        }
-        .cn-corp-sister {
-          background: #ffffff;
-          border: 1px solid var(--border);
-          border-radius: 18px;
-          padding: 28px 24px;
-          transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-          position: relative;
-          overflow: hidden;
-          text-align: center;
-        }
-        .cn-corp-sister::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, var(--accent), transparent);
-          opacity: 0;
-          transition: opacity 0.5s ease;
-        }
-        .cn-corp-sister:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 40px rgba(25, 40, 58, 0.08);
-          border-color: rgba(175, 105, 63, 0.15);
-          background: #ffffff;
-        }
-        .cn-corp-sister:hover::before {
-          opacity: 1;
-        }
-        .cn-corp-sister-icon {
-          width: 52px;
-          height: 52px;
-          margin: 0 auto 16px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-          background: linear-gradient(135deg, var(--accent), #c97a4a);
-        }
-        .cn-corp-sister:hover .cn-corp-sister-icon {
-          transform: scale(1.1) rotate(-5deg);
-          box-shadow: 0 8px 25px rgba(175, 105, 63, 0.3);
-        }
-        .cn-corp-sister-icon svg {
-          width: 24px;
-          height: 24px;
-          color: #fff;
-        }
-        .cn-corp-sister h5 {
-          font-size: 16px;
-          font-weight: 700;
-          color: var(--primary);
-          margin-bottom: 10px;
-          font-family: 'Playfair Display', serif;
-          transition: color 0.3s ease;
-        }
-        .cn-corp-sister:hover h5 {
-          color: var(--accent);
-        }
-        .cn-corp-sister p {
-          font-size: 13px;
-          color: var(--text-light);
-          line-height: 1.7;
-          margin: 0;
         }
         @media (max-width: 1024px) {
           .cn-corp-divisions {
@@ -362,7 +435,7 @@ export default function CorporateConsultancy() {
       `}</style>
 
       <section className="vt-hero">
-        <img className="vt-hero-video" src="/client-hero.jpg" alt="Corporate Consultancy" />
+        <img className="vt-hero-video" src="/corporate-hero.jpg" alt="Corporate Consultancy" />
         <div className="vt-hero-overlay"></div>
         <div className="vt-hero-content">
           <span className="vt-hero-badge">CORPORATE CONSULTANCY</span>
@@ -430,26 +503,62 @@ export default function CorporateConsultancy() {
           </div>
           <div className="cpc-service-grid">
             <div className="cpc-service-card">
+              <span className="cpc-service-num">01</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M19 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" /><path d="M22 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+              </div>
               <h3>Board Advisory</h3>
               <p>Strategic guidance to boards on governance best practices, fiduciary responsibilities, and regulatory compliance.</p>
             </div>
             <div className="cpc-service-card">
+              <span className="cpc-service-num">02</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" />
+                </svg>
+              </div>
               <h3>M&A Advisory</h3>
               <p>End-to-end transaction support including target identification, valuation, due diligence, and integration planning.</p>
             </div>
             <div className="cpc-service-card">
+              <span className="cpc-service-num">03</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
+                </svg>
+              </div>
               <h3>Organizational Design</h3>
               <p>Restructure your organization for optimal performance, agility, and alignment with strategic objectives.</p>
             </div>
             <div className="cpc-service-card">
+              <span className="cpc-service-num">04</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
               <h3>Risk & Compliance</h3>
               <p>Comprehensive risk assessment frameworks and compliance programs tailored to your industry and regulatory environment.</p>
             </div>
             <div className="cpc-service-card">
+              <span className="cpc-service-num">05</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+              </div>
               <h3>Strategic Partnerships</h3>
               <p>Identify, evaluate, and structure strategic alliances, joint ventures, and partnership opportunities.</p>
             </div>
             <div className="cpc-service-card">
+              <span className="cpc-service-num">06</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
               <h3>Performance Management</h3>
               <p>Design and implement performance management systems that drive accountability and business results.</p>
             </div>
@@ -484,15 +593,6 @@ export default function CorporateConsultancy() {
             <div className="cn-corp-division">
               <div className="cn-corp-div-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <h4>Financial Consultancy</h4>
-              <p>Investment strategies, portfolio planning, risk management, and financial advisory solutions tailored for sustainable business growth.</p>
-            </div>
-            <div className="cn-corp-division">
-              <div className="cn-corp-div-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -519,36 +619,32 @@ export default function CorporateConsultancy() {
             </div>
           </div>
 
-          <div className="cn-corp-section-label">
-            <h3>Sister Companies</h3>
-            <p>Complementary services under one umbrella</p>
-          </div>
           <div className="cn-corp-sisters">
-            <div className="cn-corp-sister">
-              <div className="cn-corp-sister-icon">
+            <div className="cn-corp-division">
+              <div className="cn-corp-div-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h5>Accounting Services</h5>
+              <h4>Accounting Services</h4>
               <p>Comprehensive accounting solutions including bookkeeping, financial reporting, payroll management, and audit support for businesses of all sizes.</p>
             </div>
-            <div className="cn-corp-sister">
-              <div className="cn-corp-sister-icon">
+            <div className="cn-corp-division">
+              <div className="cn-corp-div-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z" />
                 </svg>
               </div>
-              <h5>Tax Advisory</h5>
+              <h4>Tax Advisory</h4>
               <p>Expert tax planning, VAT consultation, corporate tax compliance, and strategic advisory services to optimize tax efficiency and ensure regulatory adherence.</p>
             </div>
-            <div className="cn-corp-sister">
-              <div className="cn-corp-sister-icon">
+            <div className="cn-corp-division">
+              <div className="cn-corp-div-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h5>Mortgage Consultancy</h5>
+              <h4>Mortgage Consultancy</h4>
               <p>Professional mortgage advisory services covering home loans, property financing, refinancing solutions, and tailored lending strategies for individuals and investors.</p>
             </div>
           </div>

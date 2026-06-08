@@ -23,35 +23,134 @@ export default function ClientConsultancy() {
           background: linear-gradient(135deg, #ae683f, #19283a);
           box-shadow: 0 12px 32px rgba(174, 104, 63, 0.35);
         }
+        @media (max-width: 1024px) {
+          .vt-hero-content {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+          }
+        }
         .cc-service-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 28px;
+          gap: 24px;
           margin-top: 50px;
         }
         .cc-service-card {
-          background: #fff;
-          border-radius: 16px;
-          padding: 36px 30px;
-          box-shadow: 0 2px 20px rgba(25,40,58,0.06);
-          transition: transform 0.4s ease, box-shadow 0.4s ease;
-          border-top: 3px solid #af693f;
+          background: linear-gradient(135deg, #1e2d3d, #b8753e);
+          border-radius: 18px;
+          padding: 34px 28px 40px;
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .cc-service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background: rgba(255,255,255,0.35);
+          border-radius: 0 2px 2px 0;
+          transition: all 0.4s ease;
+          z-index: 2;
+        }
+        .cc-service-card::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+          transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          pointer-events: none;
+          z-index: 1;
         }
         .cc-service-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 16px 48px rgba(25,40,58,0.12);
+          transform: translateY(-8px) scale(1.03);
+          box-shadow:
+            0 30px 60px rgba(25,40,58,0.35),
+            0 0 50px rgba(175,105,63,0.15);
+        }
+        .cc-service-card:hover::before {
+          background: #ffffff;
+          width: 4px;
+          box-shadow: 0 0 14px rgba(255,255,255,0.5);
+        }
+        .cc-service-card:hover::after {
+          left: 100%;
+        }
+        .cc-service-num {
+          font-size: 42px;
+          font-weight: 800;
+          font-family: 'Playfair Display', serif;
+          color: rgba(255,255,255,0.04);
+          position: absolute;
+          top: 12px;
+          right: 18px;
+          line-height: 1;
+          pointer-events: none;
+          z-index: 1;
+          transition: color 0.5s ease;
+        }
+        .cc-service-card:hover .cc-service-num {
+          color: rgba(255,255,255,0.08);
+        }
+        .cc-service-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          background: rgba(175,105,63,0.25);
+          border: 1px solid rgba(255,255,255,0.12);
+          transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+          position: relative;
+          z-index: 2;
+        }
+        .cc-service-card:hover .cc-service-icon {
+          background: linear-gradient(135deg, var(--accent), #c97a4a);
+          border-color: transparent;
+          box-shadow: 0 8px 28px rgba(175,105,63,0.35);
+          transform: scale(1.1) rotate(-3deg);
+        }
+        .cc-service-icon svg {
+          width: 24px;
+          height: 24px;
+          color: #fff;
+          transition: transform 0.6s ease;
+        }
+        .cc-service-card:hover .cc-service-icon svg {
+          transform: scale(1.08);
         }
         .cc-service-card h3 {
           font-size: 20px;
           font-weight: 700;
-          color: #19283a;
+          color: rgba(255,255,255,0.92);
           margin-bottom: 12px;
           font-family: 'Playfair Display', serif;
+          position: relative;
+          z-index: 2;
+          transition: color 0.4s ease;
+        }
+        .cc-service-card:hover h3 {
+          color: #ffffff;
         }
         .cc-service-card p {
           font-size: 14px;
-          color: #5a6577;
-          line-height: 1.7;
+          color: rgba(255,255,255,0.55);
+          line-height: 1.75;
+          margin: 0;
+          position: relative;
+          z-index: 2;
+          transition: color 0.4s ease;
+        }
+        .cc-service-card:hover p {
+          color: rgba(255,255,255,0.75);
         }
 
         .cn-client {
@@ -678,26 +777,62 @@ export default function ClientConsultancy() {
           </div>
           <div className="cc-service-grid">
             <div className="cc-service-card">
+              <span className="cc-service-num">01</span>
+              <div className="cc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                </svg>
+              </div>
               <h3>Business Advisory</h3>
               <p>Comprehensive advisory services covering strategy, operations, and growth planning for businesses at every stage.</p>
             </div>
             <div className="cc-service-card">
+              <span className="cc-service-num">02</span>
+              <div className="cc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                </svg>
+              </div>
               <h3>Strategic Planning</h3>
               <p>Develop actionable roadmaps that align your vision with market realities and drive measurable outcomes.</p>
             </div>
             <div className="cc-service-card">
+              <span className="cc-service-num">03</span>
+              <div className="cc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                </svg>
+              </div>
               <h3>Market Entry</h3>
               <p>Navigate new markets with confidence through detailed research, partner identification, and entry strategy.</p>
             </div>
             <div className="cc-service-card">
+              <span className="cc-service-num">04</span>
+              <div className="cc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" />
+                </svg>
+              </div>
               <h3>Growth Consulting</h3>
               <p>Identify and capitalize on growth opportunities through data-driven analysis and strategic execution.</p>
             </div>
             <div className="cc-service-card">
+              <span className="cc-service-num">05</span>
+              <div className="cc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
               <h3>Performance Improvement</h3>
               <p>Optimize processes, reduce costs, and enhance operational efficiency across your organization.</p>
             </div>
             <div className="cc-service-card">
+              <span className="cc-service-num">06</span>
+              <div className="cc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 3 21 3 21 8" /><line x1="4" y1="20" x2="21" y2="3" /><polyline points="21 16 21 21 16 21" /><line x1="15" y1="15" x2="21" y2="21" /><line x1="4" y1="4" x2="9" y2="9" />
+                </svg>
+              </div>
               <h3>Change Management</h3>
               <p>Guide your organization through transformation with structured change management frameworks.</p>
             </div>
