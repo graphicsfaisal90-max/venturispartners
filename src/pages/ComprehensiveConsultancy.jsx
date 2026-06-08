@@ -421,77 +421,6 @@ export default function ComprehensiveConsultancy() {
         </div>
       </section>
 
-      <section className="section" style={{ background: '#f8faff' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">OUR SERVICES</span>
-            <h2 className="section-title">What We Offer</h2>
-          </div>
-          <div className="cpc-service-grid">
-            <div className="cpc-service-card">
-              <span className="cpc-service-num">01</span>
-              <div className="cpc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-                </svg>
-              </div>
-              <h3>Strategy Consulting</h3>
-              <p>Develop winning strategies that drive sustainable growth and competitive advantage through rigorous analysis and creative thinking.</p>
-            </div>
-            <div className="cpc-service-card">
-              <span className="cpc-service-num">02</span>
-              <div className="cpc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
-                </svg>
-              </div>
-              <h3>Operations Excellence</h3>
-              <p>Streamline processes, reduce costs, and improve quality through operational best practices and continuous improvement methodologies.</p>
-            </div>
-            <div className="cpc-service-card">
-              <span className="cpc-service-num">03</span>
-              <div className="cpc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-                </svg>
-              </div>
-              <h3>Market Intelligence</h3>
-              <p>Gain actionable insights through comprehensive market research, competitor analysis, and industry trend forecasting.</p>
-            </div>
-            <div className="cpc-service-card">
-              <span className="cpc-service-num">04</span>
-              <div className="cpc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" />
-                </svg>
-              </div>
-              <h3>Growth Strategy</h3>
-              <p>Identify and pursue new growth opportunities through market expansion, product development, and strategic partnerships.</p>
-            </div>
-            <div className="cpc-service-card">
-              <span className="cpc-service-num">05</span>
-              <div className="cpc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
-                </svg>
-              </div>
-              <h3>Digital Transformation</h3>
-              <p>Leverage technology to transform your business operations, enhance customer experiences, and drive innovation.</p>
-            </div>
-            <div className="cpc-service-card">
-              <span className="cpc-service-num">06</span>
-              <div className="cpc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
-                </svg>
-              </div>
-              <h3>Organizational Design</h3>
-              <p>Build high-performing teams and structures that align with your strategic objectives and company culture.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="cn-services">
         <div className="container">
           <div className="cn-services-header">
@@ -582,6 +511,77 @@ export default function ComprehensiveConsultancy() {
                 <span className="cn-service-tag">Stakeholder Engagement</span>
                 <span className="cn-service-tag">Culture Transformation</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ background: '#f8faff' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">OUR SERVICES</span>
+            <h2 className="section-title">What We Offer</h2>
+          </div>
+          <div className="cpc-service-grid">
+            <div className="cpc-service-card">
+              <span className="cpc-service-num">01</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                </svg>
+              </div>
+              <h3>Strategy Consulting</h3>
+              <p>Develop winning strategies that drive sustainable growth and competitive advantage through rigorous analysis and creative thinking.</p>
+            </div>
+            <div className="cpc-service-card">
+              <span className="cpc-service-num">02</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
+                </svg>
+              </div>
+              <h3>Operations Excellence</h3>
+              <p>Streamline processes, reduce costs, and improve quality through operational best practices and continuous improvement methodologies.</p>
+            </div>
+            <div className="cpc-service-card">
+              <span className="cpc-service-num">03</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                </svg>
+              </div>
+              <h3>Market Intelligence</h3>
+              <p>Gain actionable insights through comprehensive market research, competitor analysis, and industry trend forecasting.</p>
+            </div>
+            <div className="cpc-service-card">
+              <span className="cpc-service-num">04</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" />
+                </svg>
+              </div>
+              <h3>Growth Strategy</h3>
+              <p>Identify and pursue new growth opportunities through market expansion, product development, and strategic partnerships.</p>
+            </div>
+            <div className="cpc-service-card">
+              <span className="cpc-service-num">05</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3>Digital Transformation</h3>
+              <p>Leverage technology to transform your business operations, enhance customer experiences, and drive innovation.</p>
+            </div>
+            <div className="cpc-service-card">
+              <span className="cpc-service-num">06</span>
+              <div className="cpc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
+                </svg>
+              </div>
+              <h3>Organizational Design</h3>
+              <p>Build high-performing teams and structures that align with your strategic objectives and company culture.</p>
             </div>
           </div>
         </div>

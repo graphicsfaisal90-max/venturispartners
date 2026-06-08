@@ -538,77 +538,6 @@ export default function DocumentationConsultancy() {
         </div>
       </section>
 
-      <section className="section" style={{ background: '#f8faff' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">OUR SERVICES</span>
-            <h2 className="section-title">What We Offer</h2>
-          </div>
-          <div className="dc-service-grid">
-            <div className="dc-service-card">
-              <span className="dc-service-num">01</span>
-              <div className="dc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
-                </svg>
-              </div>
-              <h3>Visa Processing</h3>
-              <p>Comprehensive visa services including employment visas, investor visas, family sponsorships, and visit visas with end-to-end processing support.</p>
-            </div>
-            <div className="dc-service-card">
-              <span className="dc-service-num">02</span>
-              <div className="dc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 12l2 2 4-4" /><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
-                </svg>
-              </div>
-              <h3>Legal Attestation</h3>
-              <p>Professional attestation of educational certificates, commercial documents, and personal papers from relevant authorities and embassies.</p>
-            </div>
-            <div className="dc-service-card">
-              <span className="dc-service-num">03</span>
-              <div className="dc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
-                </svg>
-              </div>
-              <h3>Business Setup</h3>
-              <p>Complete business incorporation services including company formation, trade license acquisition, and PRO services across all UAE jurisdictions.</p>
-            </div>
-            <div className="dc-service-card">
-              <span className="dc-service-num">04</span>
-              <div className="dc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-              </div>
-              <h3>Government Services</h3>
-              <p>Efficient processing of government-related transactions, renewals, and correspondence with local and federal authorities.</p>
-            </div>
-            <div className="dc-service-card">
-              <span className="dc-service-num">05</span>
-              <div className="dc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-                </svg>
-              </div>
-              <h3>Translation Services</h3>
-              <p>Certified translation of legal, financial, and technical documents by qualified translators in multiple languages.</p>
-            </div>
-            <div className="dc-service-card">
-              <span className="dc-service-num">06</span>
-              <div className="dc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" />
-                </svg>
-              </div>
-              <h3>PRO Services</h3>
-              <p>Dedicated public relations officer services handling all government paperwork, submissions, and follow-ups on your behalf.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="cn-documentary">
         <div className="cn-doc-orb cn-doc-orb--1" />
         <div className="cn-doc-orb cn-doc-orb--2" />
@@ -737,6 +666,77 @@ export default function DocumentationConsultancy() {
                 <path d="M5 12h14m-7-7l7 7-7 7" />
               </svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ background: '#f8faff' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">OUR SERVICES</span>
+            <h2 className="section-title">What We Offer</h2>
+          </div>
+          <div className="dc-service-grid">
+            <div className="dc-service-card">
+              <span className="dc-service-num">01</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+                </svg>
+              </div>
+              <h3>Visa Processing</h3>
+              <p>Comprehensive visa services including employment visas, investor visas, family sponsorships, and visit visas with end-to-end processing support.</p>
+            </div>
+            <div className="dc-service-card">
+              <span className="dc-service-num">02</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 12l2 2 4-4" /><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                </svg>
+              </div>
+              <h3>Legal Attestation</h3>
+              <p>Professional attestation of educational certificates, commercial documents, and personal papers from relevant authorities and embassies.</p>
+            </div>
+            <div className="dc-service-card">
+              <span className="dc-service-num">03</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                </svg>
+              </div>
+              <h3>Business Setup</h3>
+              <p>Complete business incorporation services including company formation, trade license acquisition, and PRO services across all UAE jurisdictions.</p>
+            </div>
+            <div className="dc-service-card">
+              <span className="dc-service-num">04</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <h3>Government Services</h3>
+              <p>Efficient processing of government-related transactions, renewals, and correspondence with local and federal authorities.</p>
+            </div>
+            <div className="dc-service-card">
+              <span className="dc-service-num">05</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                </svg>
+              </div>
+              <h3>Translation Services</h3>
+              <p>Certified translation of legal, financial, and technical documents by qualified translators in multiple languages.</p>
+            </div>
+            <div className="dc-service-card">
+              <span className="dc-service-num">06</span>
+              <div className="dc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+              </div>
+              <h3>PRO Services</h3>
+              <p>Dedicated public relations officer services handling all government paperwork, submissions, and follow-ups on your behalf.</p>
+            </div>
           </div>
         </div>
       </section>

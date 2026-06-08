@@ -512,77 +512,6 @@ export default function FinancialConsultancy() {
         </div>
       </section>
 
-      <section className="section" style={{ background: '#f8faff' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">OUR SERVICES</span>
-            <h2 className="section-title">What We Offer</h2>
-          </div>
-          <div className="fc-service-grid">
-            <div className="fc-service-card">
-              <span className="fc-service-num">01</span>
-              <div className="fc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-                </svg>
-              </div>
-              <h3>Strategic Planning</h3>
-              <p>Comprehensive financial planning aligned with your long-term business objectives and growth aspirations.</p>
-            </div>
-            <div className="fc-service-card">
-              <span className="fc-service-num">02</span>
-              <div className="fc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
-                </svg>
-              </div>
-              <h3>Investment Advisory</h3>
-              <p>Expert guidance on investment opportunities, portfolio diversification, and asset allocation strategies.</p>
-            </div>
-            <div className="fc-service-card">
-              <span className="fc-service-num">03</span>
-              <div className="fc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
-              <h3>Risk Management</h3>
-              <p>Identification and mitigation of financial risks through robust frameworks and proactive monitoring.</p>
-            </div>
-            <div className="fc-service-card">
-              <span className="fc-service-num">04</span>
-              <div className="fc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
-                </svg>
-              </div>
-              <h3>M&A Advisory</h3>
-              <p>End-to-end support for mergers, acquisitions, and divestitures including valuation and due diligence.</p>
-            </div>
-            <div className="fc-service-card">
-              <span className="fc-service-num">05</span>
-              <div className="fc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                </svg>
-              </div>
-              <h3>Regulatory Compliance</h3>
-              <p>Navigating complex regulatory environments with expert compliance guidance and reporting support.</p>
-            </div>
-            <div className="fc-service-card">
-              <span className="fc-service-num">06</span>
-              <div className="fc-service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
-                </svg>
-              </div>
-              <h3>Wealth Management</h3>
-              <p>Tailored wealth preservation and growth strategies for high-net-worth individuals and family offices.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="cn-financial">
         <div className="container">
           <div className="cn-fin-header">
@@ -696,6 +625,77 @@ export default function FinancialConsultancy() {
                 <li><span className="cn-fin-dot" />Insurance Advisory</li>
                 <li><span className="cn-fin-dot" />Financial Protection</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ background: '#f8faff' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">OUR SERVICES</span>
+            <h2 className="section-title">What We Offer</h2>
+          </div>
+          <div className="fc-service-grid">
+            <div className="fc-service-card">
+              <span className="fc-service-num">01</span>
+              <div className="fc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                </svg>
+              </div>
+              <h3>Strategic Planning</h3>
+              <p>Comprehensive financial planning aligned with your long-term business objectives and growth aspirations.</p>
+            </div>
+            <div className="fc-service-card">
+              <span className="fc-service-num">02</span>
+              <div className="fc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                </svg>
+              </div>
+              <h3>Investment Advisory</h3>
+              <p>Expert guidance on investment opportunities, portfolio diversification, and asset allocation strategies.</p>
+            </div>
+            <div className="fc-service-card">
+              <span className="fc-service-num">03</span>
+              <div className="fc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3>Risk Management</h3>
+              <p>Identification and mitigation of financial risks through robust frameworks and proactive monitoring.</p>
+            </div>
+            <div className="fc-service-card">
+              <span className="fc-service-num">04</span>
+              <div className="fc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
+                </svg>
+              </div>
+              <h3>M&A Advisory</h3>
+              <p>End-to-end support for mergers, acquisitions, and divestitures including valuation and due diligence.</p>
+            </div>
+            <div className="fc-service-card">
+              <span className="fc-service-num">05</span>
+              <div className="fc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
+              <h3>Regulatory Compliance</h3>
+              <p>Navigating complex regulatory environments with expert compliance guidance and reporting support.</p>
+            </div>
+            <div className="fc-service-card">
+              <span className="fc-service-num">06</span>
+              <div className="fc-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                </svg>
+              </div>
+              <h3>Wealth Management</h3>
+              <p>Tailored wealth preservation and growth strategies for high-net-worth individuals and family offices.</p>
             </div>
           </div>
         </div>
