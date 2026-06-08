@@ -15,9 +15,9 @@ const services = [
     image: '/digital-marketing.jpg',
   },
   {
-    title: 'Graphics Design & Branding',
-    desc: 'Creative visual solutions and brand identity development that captivate audiences, communicate your story, and set your business apart from the competition.',
-    image: '/graphics-design-branding.jpg',
+    title: 'Documentation Consultancy',
+    desc: 'Professional documentation services including technical writing, proposal development, compliance documentation, and business process documentation tailored to your industry needs.',
+    image: 'https://img.magnific.com/free-photo/business-man-financial-inspector-secretary-making-report-calculating-checking-balance-internal-revenue-service-inspector-checking-document-audit-concept_1423-126.jpg?semt=ais_hybrid&w=740&q=80',
   },
   {
     title: 'Client Consultancy',

@@ -8,7 +8,14 @@ const navLinks = [
   { path: '/services', label: 'Services', subItems: [
     { path: '/services/venturis-tech', label: 'Venturis Tech' },
     { path: '/services/e-commerce-trading', label: 'E-Commerce & Trading' },
-    { path: '/services/consultancy', label: 'Consultancy' },
+    { path: '/services/consultancy', label: 'Consultancy', subItems: [
+      { path: '/services/consultancy/financial-consultancy', label: 'Financial Consultancy' },
+      { path: '/services/consultancy/client-consultancy', label: 'Client Consultancy' },
+      { path: '/services/consultancy/documentation-consultancy', label: 'Documentation Consultancy' },
+      { path: '/services/consultancy/comprehensive-consultancy', label: 'Comprehensive Consultancy' },
+      { path: '/services/consultancy/corporate-consultancy', label: 'Corporate Consultancy' },
+      { path: '/services/consultancy/mortgage-consultancy', label: 'Mortgage Consultancy' },
+    ] },
   ] },
   { path: '/contact', label: 'Contact' },
   { path: '/faq', label: 'FAQ' },
@@ -17,6 +24,7 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [consultancyOpen, setConsultancyOpen] = useState(false)
   const servicesRef = useRef(null)
   const location = useLocation()
   const isServicesActive = location.pathname === '/services' || location.pathname.startsWith('/services/')
@@ -24,6 +32,7 @@ export default function Navbar() {
   const closeAll = useCallback(() => {
     setOpen(false)
     setServicesOpen(false)
+    setConsultancyOpen(false)
   }, [])
 
   return (
@@ -63,15 +72,56 @@ export default function Navbar() {
                     </button>
                     <ul className={`nav-dropdown ${servicesOpen ? 'open' : ''}`}>
                       {link.subItems.map(sub => (
-                        <li key={sub.path}>
-                          <NavLink
-                            to={sub.path}
-                            className={({ isActive }) => `nav-dropdown-link ${isActive ? 'active' : ''}`}
-                            onClick={closeAll}
-                          >
-                            <span className="nav-dropdown-dot"></span>
-                            {sub.label}
-                          </NavLink>
+                        <li key={sub.path} className={`nav-dropdown-item ${sub.subItems ? 'has-submenu' : ''}`}>
+                          {sub.subItems ? (
+                            <>
+                              <div className="nav-dropdown-link nav-dropdown-link--parent">
+                                <NavLink
+                                  to={sub.path}
+                                  className={({ isActive }) => `nav-dropdown-parent-link ${isActive ? 'active' : ''}`}
+                                  onClick={closeAll}
+                                >
+                                  <span className="nav-dropdown-dot"></span>
+                                  {sub.label}
+                                </NavLink>
+                                <button
+                                  className="nav-submenu-toggle"
+                                  onClick={(e) => {
+                                    e.stopPropagation()
+                                    setConsultancyOpen(!consultancyOpen)
+                                  }}
+                                  aria-label="Toggle submenu"
+                                >
+                                  <svg className={`nav-submenu-caret ${consultancyOpen ? 'rotated' : ''}`} width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                    <polyline points="9 6 15 12 9 18"/>
+                                  </svg>
+                                </button>
+                              </div>
+                              <ul className={`nav-submenu ${consultancyOpen ? 'open' : ''}`}>
+                                {sub.subItems.map(nested => (
+                                  <li key={nested.path}>
+                                    <NavLink
+                                      to={nested.path}
+                                      className={({ isActive }) => `nav-dropdown-link ${isActive ? 'active' : ''}`}
+                                      onClick={closeAll}
+                                    >
+                                      <span className="nav-dropdown-dot"></span>
+                                      {nested.label}
+                                    </NavLink>
+                                  </li>
+                                ))}
+                              </ul>
+                            </>
+                          ) : (
+                            <NavLink
+                              to={sub.path}
+                              className={({ isActive }) => `nav-dropdown-link ${isActive ? 'active' : ''}`}
+                              onClick={closeAll}
+                            >
+                              <span className="nav-dropdown-dot"></span>
+                              {sub.label}
+                            </NavLink>
+                          )}
                         </li>
                       ))}
                     </ul>

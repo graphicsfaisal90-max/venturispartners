@@ -203,6 +203,112 @@
   opacity: 1;
 }
 
+.nav-dropdown-item.has-submenu {
+  position: relative;
+}
+
+.nav-dropdown-link--parent {
+  display: flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: var(--transition);
+  gap: 4px;
+}
+
+.nav-dropdown-link--parent:hover {
+  background: var(--bg-alt);
+}
+
+.nav-dropdown-parent-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 4px 0;
+  transition: var(--transition);
+}
+
+.nav-dropdown-parent-link:hover {
+  color: var(--accent);
+}
+
+.nav-dropdown-parent-link.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav-submenu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.nav-submenu-toggle:hover {
+  background: rgba(175, 105, 63, 0.1);
+}
+
+.nav-submenu-caret {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: var(--text-light);
+}
+
+.nav-submenu-caret.rotated {
+  transform: rotate(90deg);
+}
+
+.nav-submenu {
+  position: absolute;
+  left: calc(100% - 4px);
+  top: -4px;
+  min-width: 220px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 16px 48px rgba(25, 40, 58, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  list-style: none;
+  z-index: 51;
+}
+
+.nav-submenu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1024px) {
+  .nav-submenu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 0 0 0 16px;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+  }
+  .nav-submenu.open {
+    display: block;
+  }
+  .nav-submenu-toggle {
+    display: inline-flex;
+  }
+}
+
 .menu-toggle {
   display: none;
   background: linear-gradient(135deg, var(--accent), #c97a4a);
@@ -374,13 +480,14 @@
     max-height: 0;
     padding: 0 8px;
     overflow: hidden;
-    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
   }
 
   .nav-dropdown.open {
     transform: none;
-    max-height: 200px;
+    max-height: 800px;
     padding: 6px;
+    overflow-y: auto;
   }
 
   .nav-dropdown::before {

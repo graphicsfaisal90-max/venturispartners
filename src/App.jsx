@@ -6,6 +6,12 @@ import Services from './pages/Services'
 import VenturisTech from './pages/VenturisTech'
 import ECommerceTrading from './pages/ECommerceTrading'
 import Consultancy from './pages/Consultancy'
+import FinancialConsultancy from './pages/FinancialConsultancy'
+import ClientConsultancy from './pages/ClientConsultancy'
+import DocumentationConsultancy from './pages/DocumentationConsultancy'
+import ComprehensiveConsultancy from './pages/ComprehensiveConsultancy'
+import CorporateConsultancy from './pages/CorporateConsultancy'
+import MortgageConsultancy from './pages/MortgageConsultancy'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
 
@@ -19,6 +25,12 @@ function App() {
         <Route path="services/venturis-tech" element={<VenturisTech />} />
         <Route path="services/e-commerce-trading" element={<ECommerceTrading />} />
         <Route path="services/consultancy" element={<Consultancy />} />
+        <Route path="services/consultancy/financial-consultancy" element={<FinancialConsultancy />} />
+        <Route path="services/consultancy/client-consultancy" element={<ClientConsultancy />} />
+        <Route path="services/consultancy/documentation-consultancy" element={<DocumentationConsultancy />} />
+        <Route path="services/consultancy/comprehensive-consultancy" element={<ComprehensiveConsultancy />} />
+        <Route path="services/consultancy/corporate-consultancy" element={<CorporateConsultancy />} />
+        <Route path="services/consultancy/mortgage-consultancy" element={<MortgageConsultancy />} />
         <Route path="contact" element={<Contact />} />
         <Route path="faq" element={<FAQ />} />
       </Route>
