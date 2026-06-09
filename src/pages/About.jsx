@@ -45,7 +45,7 @@ const leadershipRow3 = [
     image: '/Muhammad Faisal.png',
   },
   {
-    name: 'Kristine Angeli W. Wapao',
+    name: 'Kristine Angeli N. Napao',
     role: 'Head of Sales & Marketing',
     bio: 'Kristine leads our sales and marketing initiatives from the Philippines. Backed by a Business Administration background, she excels at transforming market opportunities into revenue growth and building high-impact regional partnerships.',
     image: '/54687.png',

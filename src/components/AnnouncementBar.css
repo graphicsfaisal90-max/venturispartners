@@ -1,0 +1,142 @@
+.announcement-bar {
+  width: 100%;
+  height: 54px;
+  background: linear-gradient(170deg, #19283a 0%, #1f2a38 30%, #322d2c 55%, #453128 75%, #523624 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  position: relative;
+}
+
+.announcement-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 15%;
+  flex-shrink: 0;
+  padding-left: 5%;
+}
+
+.announcement-left svg {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.announcement-left a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.announcement-left a:hover {
+  opacity: 0.85;
+}
+
+.announcement-center {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 24px;
+  position: relative;
+}
+
+.announcement-center::before,
+.announcement-center::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 40px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.announcement-center::before {
+  left: 0;
+  background: linear-gradient(90deg, #19283a 0%, transparent 100%);
+}
+
+.announcement-center::after {
+  right: 0;
+  background: linear-gradient(270deg, #19283a 0%, transparent 100%);
+}
+
+.announcement-track {
+  display: flex;
+  width: max-content;
+  animation: announcementScroll 30s linear infinite;
+}
+
+.announcement-slide {
+  display: flex;
+  align-items: center;
+}
+
+.announcement-text {
+  font-size: 16px;
+  white-space: nowrap;
+  padding: 0 48px;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.announcement-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 15%;
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+
+.announcement-social {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.announcement-social:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-1px);
+}
+
+@keyframes announcementScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 992px) {
+  .announcement-left,
+  .announcement-right {
+    display: none;
+  }
+  .announcement-center {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .announcement-bar {
+    height: 40px;
+    padding: 0 16px;
+  }
+  .announcement-text {
+    font-size: 12px;
+    padding: 0 24px;
+  }
+}

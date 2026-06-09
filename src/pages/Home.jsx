@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect, useCallback } from 'react'
 import PaymentMethodsCarousel from '../components/PaymentMethodsCarousel'
 import AnimatedCounter from '../components/AnimatedCounter'
 import './Home.css'
@@ -42,6 +43,108 @@ const stats = [
   { number: '15+', label: 'Years Experience', icon: 'M12 8v4l3 3 M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z' },
   { number: '50M+', label: 'Revenue Generated', icon: 'M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z M13 2v7h7 M9 15l2-2 2 2 4-4' },
 ]
+
+const partnerLogos = [
+  '549544db-680f-48e5-9b29-0d1ec597ad05.png',
+  '657e7a7e-7691-42f3-bc9f-4b3f8c2ae0fb.png',
+  '6d14c8ac-1c65-46ae-8b00-dafaf2f1f5ab.png',
+  '72232f62-0c9c-4f47-838d-9ae09b6b63ab.png',
+  'a6f5d71a-3e0f-407a-b48e-d3443918b5f0.png',
+  'a8003c87-93b9-4a36-857f-7d4d3522462b.png',
+  'b4382346-8be6-456a-8829-979b1106f60e.png',
+  'ce04a61a-f46b-429b-b8f6-1e0761e930df.png',
+  'eeae368f-9322-4995-9c91-c19596d91301.png',
+  'Untitled design (1).png',
+]
+
+const base = '/Channel Partners logo/'
+
+function PartnerCarousel() {
+  const [current, setCurrent] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+  const total = partnerLogos.length
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % total)
+  }, [total])
+
+  const prev = useCallback(() => {
+    setCurrent((prev) => (prev - 1 + total) % total)
+  }, [total])
+
+  useEffect(() => {
+    if (isPaused) return
+    const timer = setInterval(next, 3000)
+    return () => clearInterval(timer)
+  }, [isPaused, next])
+
+  const visible = []
+  for (let i = 0; i < 5; i++) {
+    const idx = (current + i) % total
+    visible.push({ name: partnerLogos[idx], index: idx })
+  }
+
+  return (
+    <div className="container">
+      <div className="partner-header">
+        <div className="partner-header-lines">
+          <span className="partner-line" />
+          <span className="partner-badge">Our Network</span>
+          <span className="partner-line" />
+        </div>
+        <h2 className="partner-title">Authorized Channel Partners</h2>
+        <p className="partner-desc">
+          Formally aligned with leading UAE government departments and legal entities to deliver unmatched excellence, strict regulatory compliance, and secure corporate solutions.
+        </p>
+      </div>
+
+      <div
+        className="partner-carousel"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <button onClick={prev} className="partner-arrow partner-arrow--left" aria-label="Previous">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button onClick={next} className="partner-arrow partner-arrow--right" aria-label="Next">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <div className="partner-grid">
+          {visible.slice(0, 5).map((logo, i) => (
+            <LogoCard key={`${logo.name}-${logo.index}`} name={logo.name} isActive={i === 0} />
+          ))}
+        </div>
+
+        <div className="partner-dots">
+          {Array.from({ length: total }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`partner-dot ${i === current ? 'partner-dot--active' : ''}`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function LogoCard({ name, isActive }) {
+  return (
+    <div className={`partner-logo-card ${isActive ? 'partner-logo-card--active' : ''}`}>
+      <div className="partner-logo-inner">
+        <img src={`${base}${name}`} alt="Channel Partner" />
+      </div>
+    </div>
+  )
+}
 
 export default function Home() {
   return (
@@ -208,6 +311,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="partner-section">
+        <PartnerCarousel />
       </section>
 
       <section className="section cta-section">
