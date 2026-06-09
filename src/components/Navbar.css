@@ -81,6 +81,16 @@
 .nav-cta {
   padding: 10px 24px;
   font-size: 14px;
+  background: linear-gradient(170deg, #19283a 0%, #1f2a38 30%, #322d2c 55%, #453128 75%, #523624 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 16px rgba(25, 40, 58, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(25, 40, 58, 0.3);
+  opacity: 0.95;
 }
 
 .nav-item {
@@ -307,7 +317,7 @@
 
 .menu-toggle {
   display: none;
-  background: linear-gradient(135deg, var(--accent), #c97a4a);
+  background: linear-gradient(170deg, #19283a 0%, #1f2a38 30%, #322d2c 55%, #453128 75%, #523624 100%);
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -317,16 +327,16 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   position: relative;
-  box-shadow: 0 4px 16px rgba(175, 105, 63, 0.25);
+  box-shadow: 0 4px 16px rgba(25, 40, 58, 0.25);
 }
 
 .menu-toggle:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(175, 105, 63, 0.35);
+  box-shadow: 0 6px 24px rgba(25, 40, 58, 0.35);
 }
 
 .menu-toggle.open {
-  background: var(--primary);
+  background: linear-gradient(170deg, #19283a 0%, #1f2a38 30%, #322d2c 55%, #453128 75%, #523624 100%);
   box-shadow: 0 4px 16px rgba(25, 40, 58, 0.25);
 }
 

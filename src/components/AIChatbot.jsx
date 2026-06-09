@@ -4,7 +4,7 @@ import './AIChatbot.css'
 const faqs = [
   {
     keywords: ['who are you', 'tell me about', 'about venturis', 'company', 'overview', 'background'],
-    answer: 'Venturis Partners is a premier business consultancy based in Dubai, UAE, with an additional office in Jacksonville, Florida, USA. We deliver excellence across Management Consulting, IT Solutions, E-Commerce & Trading, and comprehensive Business Advisory services. Our mission is to empower businesses with strategic insights and innovative solutions for sustainable growth. You can explore the full breakdown of our services directly on our website.'
+    answer: 'Venturis Partners is a premier business consultancy based in Dubai, UAE, with an additional US office in Jacksonville, Florida. We empower businesses with strategic insights and innovative solutions for sustainable growth. You can explore our full range of services on our website.'
   },
   {
     keywords: ['mission', 'vision', 'goal', 'objective', 'values'],
@@ -12,11 +12,11 @@ const faqs = [
   },
   {
     keywords: ['service', 'offer', 'provide', 'do', 'solutions'],
-    answer: 'Venturis Partners offers four main service pillars:\n\n1) Management Consulting — Marketing management, business registration, business center services, strategic frameworks\n2) Venturis Tech — IT solutions, software development, cloud computing, cybersecurity\n3) E-Commerce & Trading — Online store setup, general trading in electronics, spices, recyclables, precious metals\n4) Business Consultancy — Financial, corporate, mortgage, client, documentation, and comprehensive advisory\n\nVisit our Services page to explore each pillar in detail.'
+    answer: 'We offer Management Consulting, Venturis Tech (IT solutions), E-Commerce & Trading, and Business Consultancy. Each pillar includes specialized sub-services. I recommend visiting our Services page to explore the one that interests you.'
   },
   {
     keywords: ['management service', 'marketing management'],
-    answer: 'Our Management Consulting division provides:\n- Marketing Management Services (advertising campaigns, social media, infographics, email marketing, whitepapers, blog writing)\n- Business Registration (4-step process)\n- Business Center Services (registration & construction)\n- 360° Structuring Ecosystem\n- Strategic Business Framework\n- Strategic Marketing Process\n\nYou can view the full breakdown directly on our website.'
+    answer: 'Our Management Consulting division covers Marketing Management, Business Registration, Business Center Services, 360° Structuring Ecosystem, Strategic Business Framework, and Strategic Marketing Process. You can find the comprehensive process and features for this service directly on our website.'
   },
   {
     keywords: ['venturis tech', 'it solution', 'software', 'technology', 'digital', 'tech service'],
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     keywords: ['consultancy', 'advisory', 'business consult'],
-    answer: 'Our Business Consultancy covers six specialized areas:\n- Financial Consultancy\n- Corporate Consultancy\n- Mortgage Consultancy\n- Client Consultancy\n- Documentation Consultancy\n- Comprehensive Consultancy\n\nEach service is tailored to specific business needs. You can explore detailed information on our website.'
+    answer: 'Our Business Consultancy covers six specialized areas: Financial, Corporate, Mortgage, Client, Documentation, and Comprehensive Consultancy — each tailored to specific business needs. You can explore detailed information on our website.'
   },
   {
     keywords: ['financial consultancy', 'financial advisory', 'finance'],
@@ -100,7 +100,7 @@ const faqs = [
   },
   {
     keywords: ['process', 'how it works', 'methodology', 'approach', 'step'],
-    answer: 'Our engagement follows a structured 4-phase approach:\n\n1) Discovery & Assessment — Understanding your business, challenges, and goals\n2) Strategy Development — Creating tailored solutions\n3) Implementation — Executing the plan with your team\n4) Review & Optimize — Measuring results and refining for continuous improvement\n\nFor a deeper dive into each phase, we encourage you to explore our website.'
+    answer: 'Our engagement follows a structured 4-phase approach: Discovery & Assessment, Strategy Development, Implementation, and Review & Optimize. For a deeper dive into each phase, please explore our website.'
   },
   {
     keywords: ['payment', 'pay', 'mode of payment', 'bank', 'transfer'],
@@ -116,7 +116,7 @@ const faqs = [
   },
   {
     keywords: ['difference', 'why choose', 'unique', 'better than', 'usp'],
-    answer: 'What sets Venturis Partners apart:\n\n1) Comprehensive service portfolio under one roof\n2) Deep expertise across multiple industries\n3) Tailored solutions for businesses of all sizes\n4) Strategic locations in Dubai and the US\n5) Commitment to measurable results and long-term partnerships\n\nWe invite you to explore our website to learn more about what makes us different.'
+    answer: 'What sets us apart: a comprehensive service portfolio under one roof, deep cross-industry expertise, tailored solutions for businesses of all sizes, strategic locations in Dubai and the US, and a commitment to measurable results. Explore our website to learn more.'
   },
   {
     keywords: ['international', 'global', 'outside uae', 'worldwide', 'overseas'],
@@ -173,7 +173,7 @@ function getResponse(input) {
 export default function AIChatbot() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([
-    { role: 'bot', text: 'Welcome to Venturis Partners. I\'m your dedicated AI Support Assistant, here to guide you through our services — from Management Consulting and Business Registration to Strategic Frameworks and Corporate Advisory. How may I assist you today?' }
+    { role: 'bot', text: 'Welcome to Venturis Partners. I\'m your AI Support Assistant. How may I assist you today?' }
   ])
   const [input, setInput] = useState('')
   const chatRef = useRef(null)
@@ -193,7 +193,7 @@ export default function AIChatbot() {
 
     const reply = getResponse(text)
     setTimeout(() => {
-      setMessages(prev => [...prev, { role: 'bot', text: reply || 'I want to ensure you get the most accurate assistance for this specific query. Please allow me to connect you with our specialized team members, or you can contact us directly to discuss this further.' }])
+      setMessages(prev => [...prev, { role: 'bot', text: reply || 'To provide you with the most accurate and specialized assistance for this query, I recommend connecting directly with our team members. Let me know if you would like our direct contact details.' }])
     }, 400)
   }
 
