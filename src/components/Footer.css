@@ -57,6 +57,13 @@
   font-size: 15px;
   line-height: 1.6;
 }
+.footer-contact li strong {
+  color: var(--accent);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
 
 .footer-bottom {
   text-align: center;
