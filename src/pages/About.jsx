@@ -19,10 +19,10 @@ const leadershipRow1 = [
 
 const leadershipRow2 = [
   {
-    name: 'Viartseika Maryana',
-    role: 'Chief Financial Officer',
-    bio: 'Seasoned CFO from Belarus with 12 years of experience in financial strategy, budgeting, investment planning, and corporate growth.',
-    image: '/Viartseika Maryana.png',
+    name: 'CAMELA DEJARO DE DIOS',
+    role: 'Head of Finance & Treasury',
+    bio: 'An elite financial strategist from the Philippines with 4+ years of expertise in strategic planning, treasury operations, and corporate P&L management.',
+    image: '/456.png',
   },
   {
     name: 'Jason Wood',
@@ -31,10 +31,10 @@ const leadershipRow2 = [
     image: '/4323.png',
   },
   {
-    name: 'Zuleide Pereira',
-    role: 'Managing Director',
-    bio: 'Results-driven Managing Director from Brazil with extensive experience in design, production, and business development across diverse industries.',
-    image: '/Zuleide Pereira.png',
+    name: 'VALENE ABELLAR BAÑOLA',
+    role: 'Head of Operations',
+    bio: 'A highly skilled professional from the Philippines with 4 years of proven expertise in strategic planning, comprehensive administrative support, and rigorous P&L management.',
+    image: '/42.png',
   },
 ]
 
