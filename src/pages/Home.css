@@ -1048,7 +1048,19 @@
     border-radius: 16px;
   }
   .partner-arrow {
-    display: none;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+  }
+  .partner-arrow--left {
+    left: -4px;
+  }
+  .partner-arrow--right {
+    right: -4px;
+  }
+  .partner-arrow svg {
+    width: 12px;
+    height: 12px;
   }
   .partner-dots {
     margin-top: 28px;
