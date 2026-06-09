@@ -24,7 +24,7 @@ $type = trim($input['type'] ?? 'contact');
 
 // --- Career form ---
 if ($type === 'career') {
-    $to = 'careers@venturispartners.com';
+    $to = 'careers@venturispartner.com';
     $subject = 'New Job Application - Venturis Partners';
 
     $fullName = htmlspecialchars(trim($input['fullName'] ?? ''));
@@ -111,7 +111,7 @@ if ($type === 'career') {
     }
 
     $body .= "
-        <p style=\"margin-top: 24px; font-size: 13px; color: #888;\">Sent from venturispartners.com careers form</p>
+        <p style=\"margin-top: 24px; font-size: 13px; color: #888;\">Sent from venturispartner.com careers form</p>
     </body>
     </html>";
 
@@ -148,7 +148,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$to = 'info@venturispartners.com';
+$to = 'info@venturispartner.com';
 $subject = 'New Contact Form Message - Venturis Partners';
 
 $body = "
@@ -179,7 +179,7 @@ $body = "
             <td style=\"padding: 10px 12px; border-bottom: 1px solid #eee;\">" . nl2br($message) . "</td>
         </tr>
     </table>
-    <p style=\"margin-top: 24px; font-size: 13px; color: #888;\">Sent from venturispartners.com contact form</p>
+    <p style=\"margin-top: 24px; font-size: 13px; color: #888;\">Sent from venturispartner.com contact form</p>
 </body>
 </html>";
 

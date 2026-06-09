@@ -17,7 +17,7 @@ export default function SEO({ title, description, keywords = [] }) {
   const siteName = 'Venturis Partners'
   const fullTitle = title ? `${title} | ${siteName}` : siteName
   const allKeywords = [...defaultKeywords, ...keywords].join(', ')
-  const url = 'https://venturispartners.com'
+  const url = 'https://venturispartner.com'
 
   return (
     <Helmet>

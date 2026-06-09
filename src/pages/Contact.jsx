@@ -37,7 +37,7 @@ export default function Contact() {
 
   return (
     <>
-      <SEO title="Contact Us" description="Get in touch with Venturis Partners. Visit our Dubai head office or US office in Jacksonville. Call +971 58 531 8860 or email info@venturispartners.com." keywords={['contact Venturis Partners', 'Dubai office', 'business consultancy contact', 'UAE business consulting']} />
+      <SEO title="Contact Us" description="Get in touch with Venturis Partners. Visit our Dubai head office or US office in Jacksonville. Call +971 58 531 8860 or email info@venturispartner.com." keywords={['contact Venturis Partners', 'Dubai office', 'business consultancy contact', 'UAE business consulting']} />
       <section className="page-hero">
         <div className="container page-hero-content">
           <span className="section-tag">Contact Us</span>
@@ -103,7 +103,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4>Email</h4>
-                      <p>info@venturispartners.com</p>
+                      <p>info@venturispartner.com</p>
                     </div>
                   </div>
                 </div>
@@ -305,7 +305,7 @@ export default function Contact() {
             <span className="section-tag">Get Started</span>
             <h2>Ready to Work Together?</h2>
             <p>Let&apos;s discuss how Venturis Partners can drive your business forward.</p>
-            <a href="mailto:info@venturispartners.com" className="btn btn-primary">
+            <a href="mailto:info@venturispartner.com" className="btn btn-primary">
               Email Us Now
               <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
