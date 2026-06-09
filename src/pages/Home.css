@@ -1054,20 +1054,7 @@
     max-height: 70%;
   }
   .partner-arrow {
-    width: 34px;
-    height: 34px;
-    top: 50%;
-    box-shadow: 0 4px 12px rgba(25, 40, 58, 0.2);
-  }
-  .partner-arrow--left {
-    left: -12px;
-  }
-  .partner-arrow--right {
-    right: -12px;
-  }
-  .partner-arrow svg {
-    width: 14px;
-    height: 14px;
+    display: none;
   }
   .partner-dots {
     margin-top: 24px;
@@ -1098,20 +1085,6 @@
   }
   .partner-logo-card {
     border-radius: 12px;
-  }
-  .partner-arrow {
-    width: 28px;
-    height: 28px;
-  }
-  .partner-arrow--left {
-    left: -8px;
-  }
-  .partner-arrow--right {
-    right: -8px;
-  }
-  .partner-arrow svg {
-    width: 12px;
-    height: 12px;
   }
   .partner-dots {
     margin-top: 20px;

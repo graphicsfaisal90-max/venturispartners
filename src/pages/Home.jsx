@@ -63,8 +63,16 @@ const base = '/Channel Partners logo/'
 function PartnerCarousel() {
   const [current, setCurrent] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [itemsPerSlide, setItemsPerSlide] = useState(5)
   const touchStartX = useRef(0)
   const total = partnerLogos.length
+
+  useEffect(() => {
+    const update = () => setItemsPerSlide(window.innerWidth <= 768 ? 2 : 5)
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
 
   const next = useCallback(() => {
     setCurrent((prev) => (prev + 1) % total)
@@ -92,7 +100,7 @@ function PartnerCarousel() {
   }, [isPaused, next])
 
   const visible = []
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < itemsPerSlide; i++) {
     const idx = (current + i) % total
     visible.push({ name: partnerLogos[idx], index: idx })
   }
@@ -131,7 +139,7 @@ function PartnerCarousel() {
         </button>
 
         <div className="partner-grid">
-          {visible.slice(0, 5).map((logo, i) => (
+          {visible.slice(0, itemsPerSlide).map((logo, i) => (
             <LogoCard key={`${logo.name}-${logo.index}`} name={logo.name} isActive={i === 0} />
           ))}
         </div>
