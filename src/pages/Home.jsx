@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import PaymentMethodsCarousel from '../components/PaymentMethodsCarousel'
 import AnimatedCounter from '../components/AnimatedCounter'
 import './Home.css'
