@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import AnimatedCounter from '../components/AnimatedCounter'
+import SEO from '../components/SEO'
 import './VenturisTech.css'
 
 const managementServices = [
@@ -207,6 +208,7 @@ const ArrowIcon = () => (
 export default function Management() {
   return (
     <>
+      <SEO title="Management Services" description="Professional management consulting services in Dubai — marketing management, business registration, business center services, and strategic frameworks." keywords={['management consulting Dubai', 'business registration UAE', 'marketing management services', 'business center Dubai']} />
       <style>{`
         .vt-hero-actions .vt-btn-primary {
           background: linear-gradient(135deg, #19283a, #ae683f);

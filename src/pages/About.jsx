@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './About.css'
 
 const leadershipRow1 = [
@@ -135,6 +136,7 @@ const timeline = [
 export default function About() {
   return (
     <>
+      <SEO title="About Us" description="Learn about Venturis Partners — our mission, team, and commitment to driving business excellence across Dubai and the UAE." keywords={['about Venturis Partners', 'Dubai business consultants', 'UAE management company']} />
       <section className="about-hero">
         <div className="about-hero-overlay"></div>
         <div className="container about-hero-content">

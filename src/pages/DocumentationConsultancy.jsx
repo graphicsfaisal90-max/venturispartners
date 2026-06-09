@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './VenturisTech.css'
 
 const ArrowIcon = () => (
@@ -10,6 +11,7 @@ const ArrowIcon = () => (
 export default function DocumentationConsultancy() {
   return (
     <>
+      <SEO title="Documentation Consultancy" description="Documentation and compliance consultancy in Dubai — legal documentation, regulatory filings, and business documentation services by Venturis Partners." keywords={['documentation consultancy Dubai', 'compliance services UAE', 'legal documentation Dubai', 'regulatory filings UAE']} />
       <style>{`
         .vt-hero-content {
           margin-left: 10%;

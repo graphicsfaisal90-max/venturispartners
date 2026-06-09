@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './Services.css'
 
 const servicesList = [
@@ -43,6 +44,7 @@ const servicesList = [
 export default function Services() {
   return (
     <>
+      <SEO title="Our Services" description="Explore Venturis Partners' comprehensive services: management consulting, IT solutions, e-commerce, trading, and business consultancy in Dubai." keywords={['business services Dubai', 'consulting services UAE', 'management consultancy Dubai']} />
       <section className="page-hero">
         <div className="container page-hero-content">
           <span className="section-tag">Our Services</span>

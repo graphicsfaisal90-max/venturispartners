@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect, useCallback, useRef } from 'react'
 import PaymentMethodsCarousel from '../components/PaymentMethodsCarousel'
 import AnimatedCounter from '../components/AnimatedCounter'
+import SEO from '../components/SEO'
 import './Home.css'
 
 const services = [
@@ -172,6 +173,7 @@ function LogoCard({ name, isActive }) {
 export default function Home() {
   return (
     <>
+      <SEO title="Home" description="Venturis Partners — leading business consultancy in Dubai, UAE. Strategic management, IT solutions, e-commerce, and business growth services." keywords={['business consultancy Dubai', 'management consulting UAE', 'IT companies in Dubai']} />
       <section className="hero">
         <div className="hero-overlay"></div>
         <video

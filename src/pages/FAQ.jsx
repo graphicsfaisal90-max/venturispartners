@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './FAQ.css'
 
 const faqData = [
@@ -38,6 +39,7 @@ export default function FAQ() {
 
   return (
     <>
+      <SEO title="FAQ" description="Frequently asked questions about Venturis Partners — services, pricing, industries, and engagement process. Get answers to common queries." keywords={['Venturis Partners FAQ', 'business consultancy questions', 'Dubai consulting FAQ', 'UAE business services']} />
       <section className="page-hero">
         <div className="container page-hero-content">
           <span className="section-tag">FAQ</span>
@@ -48,13 +50,14 @@ export default function FAQ() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section faq-section">
         <div className="container">
           <div className="faq-list">
             {faqData.map((item, i) => (
               <div key={i} className={`faq-item ${openIndex === i ? 'open' : ''}`}>
                 <button className="faq-question" onClick={() => toggleFAQ(i)}>
-                  <span>{item.q}</span>
+                  <span className="faq-q-number">0{i + 1}</span>
+                  <span className="faq-q-text">{item.q}</span>
                   <svg
                     width="20"
                     height="20"
@@ -69,7 +72,7 @@ export default function FAQ() {
                     <polyline points="6 9 12 15 18 9"/>
                   </svg>
                 </button>
-                <div className="faq-answer">
+                <div className="faq-answer" style={{ maxHeight: openIndex === i ? '300px' : '0' }}>
                   <p>{item.a}</p>
                 </div>
               </div>
@@ -77,10 +80,18 @@ export default function FAQ() {
           </div>
 
           <div className="faq-cta">
+            <div className="faq-cta-icon">
+              <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h8m-4-4v8" />
+              </svg>
+            </div>
             <h3>Still have questions?</h3>
             <p>We&apos;re here to help. Reach out to us anytime.</p>
             <Link to="/contact" className="btn btn-primary">
               Contact Us
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './VenturisTech.css'
 
 const CheckIcon = () => (
@@ -16,6 +17,7 @@ const ArrowIcon = () => (
 export default function ECommerceTrading() {
   return (
     <>
+      <SEO title="E-Commerce & Trading" description="E-commerce development and general trading services in Dubai — online store setup, digital sales channels, and import/export solutions by Venturis Partners." keywords={['e-commerce Dubai', 'trading company UAE', 'online business setup Dubai', 'import export Dubai']} />
       <style>{`
         .et-hero-content {
           margin-left: 10%;

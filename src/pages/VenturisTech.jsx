@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import AnimatedCounter from '../components/AnimatedCounter'
+import SEO from '../components/SEO'
 import './VenturisTech.css'
 
 const techServices = [
@@ -258,6 +259,7 @@ const ArrowIcon = () => (
 export default function VenturisTech() {
   return (
     <>
+      <SEO title="Venturis Tech" description="IT solutions and digital transformation services in Dubai — software development, cloud computing, cybersecurity, and tech consulting by Venturis Partners." keywords={['IT companies in UAE', 'tech consulting Dubai', 'digital transformation UAE', 'software development Dubai']} />
       <section className="vt-hero">
         <video className="vt-hero-video" autoPlay muted loop playsInline poster="/vt-service-01.jpg">
           <source src="/6565.mp4" type="video/mp4" />
