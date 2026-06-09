@@ -62,6 +62,7 @@ const base = '/Channel Partners logo/'
 function PartnerCarousel() {
   const [current, setCurrent] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const touchStartX = useRef(0)
   const total = partnerLogos.length
 
   const next = useCallback(() => {
@@ -71,6 +72,17 @@ function PartnerCarousel() {
   const prev = useCallback(() => {
     setCurrent((prev) => (prev - 1 + total) % total)
   }, [total])
+
+  const handleTouchStart = useCallback((e) => {
+    touchStartX.current = e.touches[0].clientX
+  }, [])
+
+  const handleTouchEnd = useCallback((e) => {
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? next() : prev()
+    }
+  }, [next, prev])
 
   useEffect(() => {
     if (isPaused) return
@@ -102,6 +114,8 @@ function PartnerCarousel() {
         className="partner-carousel"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         <button onClick={prev} className="partner-arrow partner-arrow--left" aria-label="Previous">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

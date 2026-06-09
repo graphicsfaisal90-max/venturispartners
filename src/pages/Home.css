@@ -1038,35 +1038,83 @@
   }
   .partner-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    gap: 12px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .partner-logo-card {
+    border-radius: 14px;
+  }
+  .partner-logo-inner {
+    height: 100px;
+    padding: 16px;
+  }
+  .partner-logo-inner img {
+    max-width: 80%;
+    max-height: 70%;
+  }
+  .partner-arrow {
+    width: 34px;
+    height: 34px;
+    top: 50%;
+    box-shadow: 0 4px 12px rgba(25, 40, 58, 0.2);
+  }
+  .partner-arrow--left {
+    left: -12px;
+  }
+  .partner-arrow--right {
+    right: -12px;
+  }
+  .partner-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+  .partner-dots {
+    margin-top: 24px;
+    gap: 6px;
+  }
+  .partner-dot {
+    width: 6px;
+    height: 6px;
+  }
+  .partner-dot--active {
+    width: 28px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-grid {
+    gap: 10px;
+    max-width: 320px;
   }
   .partner-logo-inner {
     height: 80px;
-    padding: 12px 14px;
+    padding: 12px;
+  }
+  .partner-logo-inner img {
+    max-width: 75%;
+    max-height: 65%;
   }
   .partner-logo-card {
-    border-radius: 16px;
+    border-radius: 12px;
   }
   .partner-arrow {
-    width: 32px;
-    height: 32px;
-    top: 50%;
+    width: 28px;
+    height: 28px;
   }
   .partner-arrow--left {
-    left: -4px;
+    left: -8px;
   }
   .partner-arrow--right {
-    right: -4px;
+    right: -8px;
   }
   .partner-arrow svg {
     width: 12px;
     height: 12px;
   }
   .partner-dots {
-    margin-top: 28px;
-  }
-  .partner-dot--active {
-    width: 32px;
+    margin-top: 20px;
   }
 }
 
