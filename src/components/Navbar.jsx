@@ -18,8 +18,9 @@ const navLinks = [
       { path: '/services/consultancy/mortgage-consultancy', label: 'Mortgage Consultancy' },
     ] },
   ] },
-  { path: '/contact', label: 'Contact' },
+  { path: '/careers', label: 'Careers' },
   { path: '/faq', label: 'FAQ' },
+  { path: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {

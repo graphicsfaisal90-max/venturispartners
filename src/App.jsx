@@ -16,6 +16,7 @@ import CorporateConsultancy from './pages/CorporateConsultancy'
 import MortgageConsultancy from './pages/MortgageConsultancy'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
+import Careers from './pages/Careers'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -46,6 +47,7 @@ function App() {
           <Route path="services/consultancy/mortgage-consultancy" element={<MortgageConsultancy />} />
           <Route path="contact" element={<Contact />} />
           <Route path="faq" element={<FAQ />} />
+          <Route path="careers" element={<Careers />} />
         </Route>
       </Routes>
     </>
