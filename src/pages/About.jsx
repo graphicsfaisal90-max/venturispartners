@@ -25,10 +25,10 @@ const leadershipRow2 = [
     image: '/456.png',
   },
   {
-    name: 'Jason Wood',
-    role: 'Chief Tourism Officer',
-    bio: 'A seasoned tourism professional with 5+ years of experience in travel management, destination partnerships, and customer engagement.',
-    image: '/4323.png',
+    name: 'Saad Khan',
+    role: 'Head of Business Development',
+    bio: 'An elite strategist from Pakistan with 15+ years of high-level experience driving international market growth, corporate scaling, and premium strategic partnerships.',
+    image: '/Saad Khan.png',
   },
   {
     name: 'VALENE ABELLAR BAÑOLA',
