@@ -41,13 +41,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contact</h4>
             <ul className="footer-contact">
-              <li><strong>Head Office</strong></li>
-              <li>5th Floor Al Saqr Tower SZR Dubai UAE</li>
-              <li><strong>US Office</strong></li>
-              <li>6501 Arlington Expressway B105 #7330 Jacksonville FL 32211 United States</li>
+              <li><strong>Head Office:</strong> 5th Floor Al Saqr Tower SZR Dubai UAE</li>
+              <li><strong>US Office:</strong> 6501 Arlington Expressway B105 #7330 Jacksonville FL 32211 United States</li>
               <li>info@venturisholdings.com</li>
-              <li>+971 58 531 8860</li>
-              <li>+1 (904) 6550900</li>
+              <li>+971 58 531 8860 &nbsp;|&nbsp; +1 (904) 6550900</li>
             </ul>
           </div>
         </div>
