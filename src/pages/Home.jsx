@@ -55,6 +55,7 @@ const partnerLogos = [
   'ce04a61a-f46b-429b-b8f6-1e0761e930df.png',
   'eeae368f-9322-4995-9c91-c19596d91301.png',
   'Untitled design (1).png',
+  '76.png',
 ]
 
 const base = '/Channel Partners logo/'
