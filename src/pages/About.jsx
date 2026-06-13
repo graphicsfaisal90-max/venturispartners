@@ -31,10 +31,10 @@ const leadershipRow2 = [
     image: '/Saad Khan.png',
   },
   {
-    name: 'VALENE ABELLAR BAÑOLA',
-    role: 'Head of Operations',
-    bio: 'A highly skilled professional from the Philippines with 4 years of proven expertise in strategic planning, comprehensive administrative support, and rigorous P&L management.',
-    image: '/42.png',
+    name: 'Momina Mirza',
+    role: 'Head of Digital Marketing',
+    bio: 'Results-driven Head of Digital Marketing with 4+ years of experience scaling brand presence and driving high-impact campaigns. Specializes in optimizing cross-channel strategies to deliver measurable ROI.',
+    image: '/Head Of DM.png',
   },
 ]
 
